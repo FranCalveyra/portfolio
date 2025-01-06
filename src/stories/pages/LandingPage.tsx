@@ -3,7 +3,7 @@ import Navbar from "../Navbar/index.tsx";
 import { TypeAnimation } from "react-type-animation";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {ItemCarousel} from "../ItemCarousel";
+import {ItemCarousel} from "../ItemCarousel/index.tsx";
 
 export const LandingPage = () => {
     let imagePath: string = require("../assets/Desktop.png");
@@ -31,7 +31,7 @@ export const LandingPage = () => {
         return (
             <div className="w-full h-full relative">
                 <div className="w-full h-full left-0 top-0 absolute">
-                    <div className="w-screen px-[293px] pt-[162px] pb-[313px] left-0 top-0 absolute bg-[#454860] justify-center items-center inline-flex">
+                    <div className="w-screen px-[293px] pt-[120px] pb-[313px] left-0 top-0 absolute bg-[#454860] justify-center items-center inline-flex">
                         <div className="grow shrink basis-0 self-stretch flex-col justify-start items-start gap-16 inline-flex">
                             <div className="self-stretch h-[464px] flex-col justify-start items-start gap-16 flex">
                                 <div className="self-stretch text-center text-white text-[64px] font-normal font-['Martian Mono']">

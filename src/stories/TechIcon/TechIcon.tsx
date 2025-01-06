@@ -7,7 +7,7 @@ interface TechIconProps {
 const TechIcon: React.FC<TechIconProps> = ({ technology }) => {
     return (
         <div className="flex justify-center items-center">
-            <img className="w-[86px] h-[86px]" src={`https://skillicons.dev/icons?i=${technology}`} alt={`${technology} Icon`} />
+            <img className="w-[86px] h-[86px]" src={`https://skillicons.dev/icons?i=` + technology} alt={`${technology} Icon`} />
         </div>
     );
 };
