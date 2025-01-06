@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-// @ts-ignore
-import Navbar from "./stories/Navbar/index.tsx";
+import {LandingPage} from "./stories/pages/LandingPage.tsx";
 
 function App() {
   return (
-    <Navbar></Navbar>
+      <div>
+
+        <LandingPage></LandingPage>
+      </div>
   );
 }
 
