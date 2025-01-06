@@ -1,12 +1,13 @@
-import { ProjectContainer } from "../stories/ProjectContainer/index.tsx";
+import { ProjectContainer } from "../../stories/ProjectContainer/index.tsx";
 import "./ProjectSection.css"
+import React from "react";
 
 export const ProjectSection = () => {
     const projects = [
         {
             projectTitle: "Austral Map",
             projectDescription: "Web application that allows users to view the curriculum of our degree program as a graph, displaying each course and its relationships",
-            projectImage: require("../stories/assets/austral-map.png"),
+            projectImage: require("../../stories/assets/austral-map.png"),
             projectLink: "https://sasakiimarcos.github.io/austral-map/",
             usedTechnologies: ["react", "ts", "tailwind", "firebase"]
         },
@@ -41,7 +42,7 @@ export const ProjectSection = () => {
         {
             projectTitle: "Trippy",
             projectDescription: "Transport Application assignment for Interaction Design at Universidad Austral",
-            projectImage: require("../stories/assets/trippy-logo.png"),
+            projectImage: require("../../stories/assets/trippy-logo.png"),
             projectLink: "https://francalveyra.github.io/trippy/",
             usedTechnologies: ["react", "ts", "tailwind", "figma"]
         },
@@ -61,11 +62,19 @@ export const ProjectSection = () => {
         }
     ];
 
-    const projectComponents = ()=>{
-        return (
-            <div className="w-screen min-h-screen bg-[#454860] flex flex-wrap justify-center gap-4 p-4 overflow-auto">
+
+    return (
+        <div className="w-screen bg-[#454860] flex flex-col items-center gap-6 p-6">
+            <h1 className="text-center text-white text-[64px] font-normal font-['Martian Mono']">
+                Projects
+            </h1>
+            <div
+                className="w-screen min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-4">
                 {projects.map((project, index) => (
-                    <div key={index} className="flex-basis-1-4">
+                    <div
+                        key={index}
+                        className="rounded-lg p-4 flex flex-col items-center justify-start"
+                    >
                         <ProjectContainer
                             projectTitle={project.projectTitle}
                             projectDescription={project.projectDescription}
@@ -76,10 +85,7 @@ export const ProjectSection = () => {
                     </div>
                 ))}
             </div>
-        )
-    }
+        </div>
 
-    return (
-            projectComponents()
     );
 };
