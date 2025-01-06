@@ -4,16 +4,12 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./ItemCarousel.css"; // Import the CSS file
 
-export const ItemCarousel = () => {
-    const technologies = [
-        "python", "javascript", "typescript", "docker", "github",
-        "nginx", "react", "nodejs", "express", "postgresql",
-        "go", "rust", "mongodb", "redis", "linux", "mysql", "html", "css", "git", "java",
-        "kotlin", "gradle", "bash", "cpp", "flutter", "dart", "maven", "spring",
-        "neovim", "vscode", "idea", "webstorm", "pycharm", "r", "regex", "tailwind",
-        "vite", "windows"
-    ];
+interface ItemCarouselProps {
+    technologies: string[];
+    iconSize: number
+}
 
+export const ItemCarousel = ({technologies, iconSize}: ItemCarouselProps) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -52,10 +48,10 @@ export const ItemCarousel = () => {
                 arrows={false}
             >
                 {technologies.map((technology, index) => (
-                    <TechIcon key={index} technology={technology} />
+                    <TechIcon key={index} technology={technology} size={iconSize} />
                 ))}
                 {technologies.map((technology, index) => (
-                    <TechIcon key={index + technologies.length} technology={technology} />
+                    <TechIcon key={index + technologies.length} technology={technology} size={iconSize} />
                 ))}
             </Carousel>
         </div>
