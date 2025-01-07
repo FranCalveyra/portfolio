@@ -72,7 +72,8 @@ export const ProjectSection = () => {
 
 
     return (
-        <div className="w-screen bg-[#454860] flex flex-col items-center gap-6 p-6">
+        <div id={"projects"}
+            className="w-screen bg-[#454860] flex flex-col items-center gap-6 p-6">
             <h1 className="text-center text-white text-[64px] font-normal font-['Martian Mono']">
                 Projects
             </h1>

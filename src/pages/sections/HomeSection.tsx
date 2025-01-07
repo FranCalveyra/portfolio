@@ -5,6 +5,7 @@ export const HomeSection = () => {
     const imagePath = require("../../stories/assets/Desktop.png");
     return (
         <div
+            id={"home"}
             className="relative w-screen h-screen bg-cover bg-center flex flex-col justify-center items-center gap-2.5"
             style={{ backgroundImage: `url(${imagePath})` }}
         >
