@@ -10,15 +10,15 @@ interface ProjectContainerProps {
 
 export const ProjectContainer = ({ projectTitle, projectLink, projectImage, projectDescription, usedTechnologies }: ProjectContainerProps) => {
     return (
-        <div className="w-full sm:w-[448px] h-[352px] px-4 sm:px-8 py-4 sm:py-[21px] bg-[#3a3e59] rounded-[50px] shadow-[0px_10px_4px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-4 overflow-hidden">
+        <div className="w-full max-w-[448px] h-auto sm:h-[352px] px-4 sm:px-8 py-4 sm:py-[21px] bg-[#3a3e59] rounded-[50px] shadow-[0px_10px_4px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-4 overflow-hidden">
             <div className="text-center text-white text-xl sm:text-2xl font-normal font-['Martian_Mono']">
                 <a href={projectLink} className="hover:underline">
                     {projectTitle}
                 </a>
             </div>
 
-            <div className="flex w-full justify-start items-start gap-4">
-                <div className="w-1/2 h-[175px] bg-transparent">
+            <div className="flex flex-col sm:flex-row w-full justify-start items-start gap-4">
+                <div className="w-full sm:w-1/2 h-[175px] bg-transparent">
                     <img
                         src={projectImage}
                         alt={projectTitle}
@@ -26,7 +26,7 @@ export const ProjectContainer = ({ projectTitle, projectLink, projectImage, proj
                     />
                 </div>
 
-                <div className="w-1/2 text-white text-sm font-normal font-['Martian_Mono']">
+                <div className="w-full sm:w-1/2 text-white text-sm font-normal font-['Martian_Mono']">
                     {projectDescription}
                 </div>
             </div>
@@ -36,4 +36,5 @@ export const ProjectContainer = ({ projectTitle, projectLink, projectImage, proj
             </div>
         </div>
     );
+
 };

@@ -14,8 +14,8 @@ export const AboutMeSection = () =>{
     ];
     return (
         <div id="aboutme"
-             className="w-screen px-4 sm:px-8 lg:px-16 pt-16 pb-8 bg-[#454860] flex flex-col items-center gap-8 sm:gap-16">
-            <h1 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
+             className="w-screen bg-[#454860] flex flex-col items-center gap-6 p-6 pt-32">
+            <h1 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono'] pb-8">
                 About Me
             </h1>
             <p className="text-center text-white text-lg sm:text-xl lg:text-2xl font-normal font-['Martian Mono']">
@@ -37,7 +37,7 @@ export const AboutMeSection = () =>{
                 , where I’m honing my skills and exploring cutting-edge technologies. Recently, I’ve been diving deep
                 into Golang and Rust, two languages that fuel my curiosity and passion for robust software development.
             </p>
-            <h2 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
+            <h2 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono'] pt-32">
                 Technologies I’m into
             </h2>
             <div

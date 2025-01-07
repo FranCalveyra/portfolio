@@ -7,3 +7,53 @@
 body {
   font-family: 'Martian Mono', monospace;
 }
+
+.icon-open .bar1,
+.icon-open .bar2,
+.icon-open .bar3 {
+  animation: fill-bar-full 0.5s forwards;
+}
+
+.icon-closed .bar1,
+.icon-closed .bar2 {
+  animation: fill-bar-half 0.5s forwards;
+}
+
+.icon-closed .bar3 {
+  animation: unfill-bar-min 0.5s forwards;
+}
+
+@keyframes fill-bar-full {
+  from {
+    stroke-dasharray: 0, 100;
+  }
+  to {
+    stroke-dasharray: 100, 0;
+  }
+}
+
+@keyframes fill-bar-half {
+  from {
+    stroke-dasharray: 0, 50;
+  }
+  to {
+    stroke-dasharray: 50, 50;
+  }
+}
+
+@keyframes unfill-bar-min {
+  from {
+    stroke-dasharray: 0, 10;
+  }
+  to {
+    stroke-dasharray: 10, 90;
+  }
+}
+
+.bar1, .bar2 {
+  stroke-dasharray: 50, 50;
+}
+
+.bar3 {
+  stroke-dasharray: 10, 90;
+}
