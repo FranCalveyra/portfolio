@@ -7,7 +7,7 @@ export const ProjectSection = () => {
         {
             projectTitle: "Chess Engine",
             projectDescription: "Chess Engine written in Java, with a GUI in JavaFX. It includes some variants like Capablanca Chess and Chess960, as well as Checkers",
-            projectImage: "https://private-user-images.githubusercontent.com/121242677/369442161-69970601-915e-4351-a352-25769fa017a4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzYyMDg1ODgsIm5iZiI6MTczNjIwODI4OCwicGF0aCI6Ii8xMjEyNDI2NzcvMzY5NDQyMTYxLTY5OTcwNjAxLTkxNWUtNDM1MS1hMzUyLTI1NzY5ZmEwMTdhNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEwN1QwMDA0NDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNzViOTU0NTMyMDgxMDM3YTJiMWY0ZTgzOTk5Njg2YTUzZjBiMjZjM2VmNTNjYzc4NTQxOGRkMmYwODJiYjRlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ySyxqzC1OZ5zrVZZ3uo4ZOUwScRwskfCHZYVUMuccyQ",
+            projectImage: require("../../stories/assets/chess-board.png"),
             projectLink: "https://chess-engine-lk8z.onrender.com",
             usedTechnologies: ["java", "gradle", "kotlin", "maven", "github"]
         },
