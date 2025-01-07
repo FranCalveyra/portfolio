@@ -40,7 +40,7 @@ export const ProjectSection = () => {
             projectTitle: "Portfolio",
             projectDescription: "This current portfolio, built with React, TypeScript and Tailwind",
             projectImage: "https://skillicons.dev/icons?i=github",
-            projectLink: "https://francalveyra.github.io/",
+            projectLink: "https://francalveyra.github.io/portfolio",
             usedTechnologies: ["react", "ts", "tailwind", "github"]
         },
 
