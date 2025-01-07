@@ -73,7 +73,7 @@ export const ProjectSection = () => {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="rounded-lg p-4 flex flex-col items-center justify-start"
+                        className="rounded-lg p-4 flex flex-wrap items-center justify-start"
                     >
                         <ProjectContainer
                             projectTitle={project.projectTitle}

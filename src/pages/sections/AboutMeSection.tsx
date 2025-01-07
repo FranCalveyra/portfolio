@@ -13,7 +13,7 @@ export const AboutMeSection = () =>{
         "vite", "windows"
     ];
     return (
-        <div className="w-screen px-[293px] pt-[120px] pb-[313px] bg-[#454860] flex flex-col items-center gap-16">
+        <div className="w-screen px-[293px] pt-[120px] pb-[64px] bg-[#454860] flex flex-col items-center gap-16">
             <h1 className="text-center text-white text-[64px] font-normal font-['Martian Mono']">
                 About Me
             </h1>
