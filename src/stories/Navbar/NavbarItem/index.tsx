@@ -5,19 +5,19 @@ interface NavbarItemProps {
 
 export const NavbarItem = ({ text, href }: NavbarItemProps) => {
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        e.preventDefault(); // Prevent default anchor behavior
+        e.preventDefault();
 
         const targetElement = document.querySelector(href);
         if (targetElement) {
             targetElement.scrollIntoView({
-                behavior: "smooth", // Smooth scroll animation
-                block: "start",     // Align to the start of the section
+                behavior: "smooth",
+                block: "start",
             });
         }
     };
 
     return (
-        <div className="h-16 text-center text-white text-2xl font-normal font-['Martian_Mono'] px-4 mt-6 hover:underline">
+        <div className="h-16 text-center text-white text-lg sm:text-xl lg:text-2xl font-normal font-['Martian_Mono'] px-2 sm:px-4 mt-2 sm:mt-6 hover:underline">
             <a href={href} onClick={handleClick}>
                 {text}
             </a>

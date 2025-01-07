@@ -2,14 +2,14 @@ import React from "react";
 import TechIcon from "../TechIcon/TechIcon.tsx";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./ItemCarousel.css"; // Import the CSS file
+import "./ItemCarousel.css";
 
 interface ItemCarouselProps {
     technologies: string[];
-    iconSize: number
+    iconSize: number;
 }
 
-export const ItemCarousel = ({technologies, iconSize}: ItemCarouselProps) => {
+export const ItemCarousel = ({ technologies, iconSize }: ItemCarouselProps) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -22,7 +22,7 @@ export const ItemCarousel = ({technologies, iconSize}: ItemCarouselProps) => {
         mobile: {
             breakpoint: { max: 464, min: 0 },
             items: 2,
-        }
+        },
     };
 
     return (
@@ -32,7 +32,7 @@ export const ItemCarousel = ({technologies, iconSize}: ItemCarouselProps) => {
                 draggable={false}
                 showDots={false}
                 responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
+                ssr={true}
                 infinite={true}
                 autoPlay={true}
                 autoPlaySpeed={0}

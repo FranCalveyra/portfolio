@@ -1,17 +1,16 @@
-import {TypeAnimation} from "react-type-animation";
+import { TypeAnimation } from "react-type-animation";
 import React from "react";
 
 export const HomeSection = () => {
     const imagePath = require("../../stories/assets/Desktop.png");
     return (
         <div
-            id={"home"}
+            id="home"
             className="relative w-screen h-screen bg-cover bg-center flex flex-col justify-center items-center gap-2.5"
             style={{ backgroundImage: `url(${imagePath})` }}
         >
-            {/* Cover */}
             <div className="absolute inset-0 bg-[#454961] opacity-65"></div>
-            <h1 className="relative text-center text-white text-[64px] font-normal font-['Martian Mono']">
+            <h1 className="relative text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
                 Hi, I’m Francisco Calveyra,
                 <TypeAnimation
                     sequence={[

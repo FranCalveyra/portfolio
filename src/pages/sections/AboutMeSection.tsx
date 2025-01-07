@@ -13,12 +13,12 @@ export const AboutMeSection = () =>{
         "vite", "windows"
     ];
     return (
-        <div id={"aboutme"}
-            className="w-screen px-[293px] pt-[120px] pb-[64px] bg-[#454860] flex flex-col items-center gap-16">
-            <h1 className="text-center text-white text-[64px] font-normal font-['Martian Mono']">
+        <div id="aboutme"
+             className="w-screen px-4 sm:px-8 lg:px-16 pt-16 pb-8 bg-[#454860] flex flex-col items-center gap-8 sm:gap-16">
+            <h1 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
                 About Me
             </h1>
-            <p className="text-center text-white text-2xl font-normal font-['Martian Mono']">
+            <p className="text-center text-white text-lg sm:text-xl lg:text-2xl font-normal font-['Martian Mono']">
                 I’m a 21-year-old Software Engineering student at{' '}
                 <a href="https://www.austral.edu.ar/" className="font-bold underline">
                     Universidad Austral
@@ -35,13 +35,13 @@ export const AboutMeSection = () =>{
                     Globant
                 </a>
                 , where I’m honing my skills and exploring cutting-edge technologies. Recently, I’ve been diving deep
-                into
-                Golang and Rust, two languages that fuel my curiosity and passion for robust software development.
+                into Golang and Rust, two languages that fuel my curiosity and passion for robust software development.
             </p>
-            <h2 className="text-center text-white text-[64px] font-normal font-['Martian Mono']">
+            <h2 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
                 Technologies I’m into
             </h2>
-            <div className="w-screen h-[164px] px-8 py-[39px] bg-[#3a3e59] flex items-center justify-start gap-[34px]">
+            <div
+                className="w-screen h-40 sm:h-48 lg:h-56 px-4 sm:px-8 py-4 sm:py-8 bg-[#3a3e59] flex items-center justify-start gap-4 sm:gap-8">
                 <ItemCarousel technologies={technologies} iconSize={86}/>
             </div>
         </div>
