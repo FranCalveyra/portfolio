@@ -49,8 +49,8 @@ export const ProjectSection = () => {
         {
             projectTitle: "RPL Clone",
             projectDescription: "Microservices replicating FIUBA's RPL page with web app and database.",
-            projectImage: "https://skillicons.dev/icons?i=github",
-            projectLink: "https://github.com/WillyTonkas/rpl-service",
+            projectImage: require("../../stories/assets/merge64-logo.png"),
+            projectLink: "https://github.com/Merge64/rpl-service",
             usedTechnologies: ["golang", "react", "ts", "postgresql", "docker", "github"]
         },
         {

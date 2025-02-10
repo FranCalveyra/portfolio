@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 export const AboutMeSection = () =>{
     const technologies = [
-        "python", "javascript", "typescript", "docker", "github",
-        "nginx", "react", "nodejs", "express", "postgresql",
-        "go", "rust", "mongodb", "redis", "linux", "mysql", "html", "css", "git", "java",
-        "kotlin", "gradle", "bash", "cpp", "flutter", "dart", "maven", "spring",
-        "neovim", "vscode", "idea", "webstorm", "pycharm", "r", "regex", "tailwind",
-        "vite", "windows"
+        "python", "go", "rust", "java", "kotlin", "cpp", "dart", "typescript",
+        "flask", "react", "express", "spring", "flutter", "nodejs",
+        "docker", "nginx", "redis", "git", "github", "bash", "gradle", "maven",
+        "postgresql", "mongodb", "mysql",
+        "linux", "neovim", "vscode", "idea",
+        "tailwind"
     ];
     return (
         <div id="aboutme"
