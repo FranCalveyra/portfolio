@@ -1,4 +1,5 @@
-import TechIcon from "../../stories/TechIcon/TechIcon.tsx";
+import React from "react";
+import { TechIcon, AltTechIcon } from "../../stories/TechIcon/TechIcon.tsx";
 
 export const ContactMeSection = () =>{
     return (

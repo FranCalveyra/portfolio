@@ -1,15 +1,16 @@
 import React from "react";
-import TechIcon from "../TechIcon/TechIcon.tsx";
+import { TechIcon, AltTechIcon } from "../TechIcon/TechIcon.tsx";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./ItemCarousel.css";
 
 interface ItemCarouselProps {
     technologies: string[];
+    altTechnologies: string[];
     iconSize: number;
 }
 
-export const ItemCarousel = ({ technologies, iconSize }: ItemCarouselProps) => {
+export const ItemCarousel = ({ technologies = [], altTechnologies = [], iconSize }: ItemCarouselProps) => {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -52,6 +53,13 @@ export const ItemCarousel = ({ technologies, iconSize }: ItemCarouselProps) => {
                 ))}
                 {technologies.map((technology, index) => (
                     <TechIcon key={index + technologies.length} technology={technology} size={iconSize} />
+                ))}
+
+                {altTechnologies.map((technology, index) => (
+                    <AltTechIcon key={index} technology={technology} size={iconSize} />
+                ))}
+                {altTechnologies.map((technology, index) => (
+                    <AltTechIcon key={index + altTechnologies.length} technology={technology} size={iconSize} />
                 ))}
             </Carousel>
         </div>

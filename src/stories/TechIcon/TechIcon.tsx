@@ -17,4 +17,16 @@ const TechIcon: React.FC<TechIconProps> = ({ technology, size }) => {
     );
 };
 
-export default TechIcon;
+const AltTechIcon: React.FC<TechIconProps> = ({ technology: techIconSrc, size }) => {
+    return (
+        <div className="flex justify-center items-center">
+            <img
+                style={{ width: size, height: size }}
+                src={`${techIconSrc}`}
+                alt={`${techIconSrc} Icon`}
+            />
+        </div>
+    );
+};
+
+export { TechIcon, AltTechIcon };
