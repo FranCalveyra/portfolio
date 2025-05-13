@@ -17,6 +17,12 @@ export const HomeSection = () => {
                         "a Software Engineering Student",
                         "a Software Developer",
                         "a passionate learner",
+                        "a Game Developer",
+                        "a problem solver",
+                        "a team player",
+                        "a quick learner",
+                        "a hard worker",
+                        "a good person",
                     ]}
                     wrapper="span"
                     speed={300}

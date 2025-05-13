@@ -26,6 +26,30 @@ export const ItemCarousel = ({ technologies = [], altTechnologies = [], iconSize
         },
     };
 
+    // Create unique JSX elements for each technology and altTechnology
+    const techElements = technologies.map((technology, index) => (
+        <TechIcon key={`tech-${index}`} technology={technology} size={iconSize} />
+    ));
+
+    const altTechElements = altTechnologies.map((technology, index) => (
+        <AltTechIcon key={`alt-tech-${index}`} technology={technology} size={iconSize} />
+    ));
+
+    // Combine them in the desired order for a single pass
+    const singlePassElements = [...techElements, ...altTechElements];
+
+    // For a smooth continuous scroll, duplicate the combined list.
+    const allElementsToRender = [
+        ...singlePassElements,
+        ...singlePassElements.map((element, index) =>
+            React.cloneElement(element, { key: `${element.key}-clone-${index}` })
+        )
+    ];
+
+    if (allElementsToRender.length === 0) {
+        return null; // Don't render carousel if there are no items
+    }
+
     return (
         <div className="carousel-container">
             <Carousel
@@ -36,31 +60,17 @@ export const ItemCarousel = ({ technologies = [], altTechnologies = [], iconSize
                 ssr={true}
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={0}
+                autoPlaySpeed={0} // Relies on customTransition for speed
                 keyBoardControl={true}
-                customTransition="transform 5s linear"
-                transitionDuration={1000}
+                customTransition="transform 1000ms linear"
+                transitionDuration={0} // Match customTransition: 2.5 seconds
                 containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                deviceType={"desktop"}
+                arrows={false} // Explicitly disable arrows for marquee style
+                deviceType={"desktop"} // Or make dynamic if needed
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
-                additionalTransfrom={-1}
-                arrows={false}
             >
-                {technologies.map((technology, index) => (
-                    <TechIcon key={index} technology={technology} size={iconSize} />
-                ))}
-                {technologies.map((technology, index) => (
-                    <TechIcon key={index + technologies.length} technology={technology} size={iconSize} />
-                ))}
-
-                {altTechnologies.map((technology, index) => (
-                    <AltTechIcon key={index} technology={technology} size={iconSize} />
-                ))}
-                {altTechnologies.map((technology, index) => (
-                    <AltTechIcon key={index + altTechnologies.length} technology={technology} size={iconSize} />
-                ))}
+                {allElementsToRender}
             </Carousel>
         </div>
     );
