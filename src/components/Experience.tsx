@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
               {experienceData.experiences.map((experience, index) => (
                 <div
                   key={experience.title}
-                  className="relative mb-12 md:pl-1/2 md:ml-8"
+                  className="relative mb-12 md:pl-0 md:ml-0"
                 >
                   {/* Timeline Dot */}
                   <div className={`absolute w-4 h-4 rounded-full bg-gradient-to-r ${experience.color} left-2 md:left-1/2 transform md:-translate-x-1/2 mt-6 z-10`}></div>

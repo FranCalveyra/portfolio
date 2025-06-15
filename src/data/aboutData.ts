@@ -43,7 +43,7 @@ export const aboutData = {
       icon: "Mate",
       value: "1000+",
       label: "Mates",
-      color: "text-green-400"
+      color: "text-red-400"
     },
     {
       icon: "Code",
