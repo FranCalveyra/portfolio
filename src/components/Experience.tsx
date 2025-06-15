@@ -1,32 +1,12 @@
 import React, { useState } from 'react';
 import { useInView } from '../hooks/useInView';
 import { Briefcase, Calendar, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import { experienceData } from '../data';
 
 const TechCarousel: React.FC<{ technologies: string[] }> = ({ technologies }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerView = 5;
   const maxIndex = Math.max(0, technologies.length - itemsPerView);
-
-  const techIcons: { [key: string]: string } = {
-    'React': 'https://skillicons.dev/icons?i=react',
-    'Node.js': 'https://skillicons.dev/icons?i=nodejs',
-    'AWS': 'https://skillicons.dev/icons?i=aws',
-    'Docker': 'https://skillicons.dev/icons?i=docker',
-    'TypeScript': 'https://skillicons.dev/icons?i=typescript',
-    'Vue.js': 'https://skillicons.dev/icons?i=vue',
-    'Python': 'https://skillicons.dev/icons?i=python',
-    'PostgreSQL': 'https://skillicons.dev/icons?i=postgresql',
-    'Redis': 'https://skillicons.dev/icons?i=redis',
-    'GraphQL': 'https://skillicons.dev/icons?i=graphql',
-    'JavaScript': 'https://skillicons.dev/icons?i=javascript',
-    'React Native': 'https://skillicons.dev/icons?i=react',
-    'MongoDB': 'https://skillicons.dev/icons?i=mongodb',
-    'Express.js': 'https://skillicons.dev/icons?i=express',
-    'Java': 'https://skillicons.dev/icons?i=java',
-    'Spring Boot': 'https://skillicons.dev/icons?i=spring',
-    'MySQL': 'https://skillicons.dev/icons?i=mysql',
-    'Git': 'https://skillicons.dev/icons?i=git',
-  };
 
   const nextSlide = () => {
     setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
@@ -42,7 +22,7 @@ const TechCarousel: React.FC<{ technologies: string[] }> = ({ technologies }) =>
         {technologies.map((tech) => (
           <div key={tech} className="w-6 h-6 group">
             <img 
-              src={techIcons[tech] || 'https://skillicons.dev/icons?i=js'} 
+              src={experienceData.techIcons[tech as keyof typeof experienceData.techIcons] || 'https://skillicons.dev/icons?i=js'} 
               alt={tech}
               className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
               title={tech}
@@ -71,7 +51,7 @@ const TechCarousel: React.FC<{ technologies: string[] }> = ({ technologies }) =>
           {technologies.map((tech) => (
             <div key={tech} className="w-6 h-6 flex-shrink-0 group">
               <img 
-                src={techIcons[tech] || 'https://skillicons.dev/icons?i=js'} 
+                src={experienceData.techIcons[tech as keyof typeof experienceData.techIcons] || 'https://skillicons.dev/icons?i=js'} 
                 alt={tech}
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                 title={tech}
@@ -95,45 +75,6 @@ const TechCarousel: React.FC<{ technologies: string[] }> = ({ technologies }) =>
 const Experience: React.FC = () => {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
-  const experiences = [
-    {
-      title: 'Senior Software Engineer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      duration: '2022 - Present',
-      description: 'Led development of microservices architecture, mentored junior developers, and implemented CI/CD pipelines reducing deployment time by 60%.',
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'TypeScript'],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'StartupXYZ',
-      location: 'Remote',
-      duration: '2020 - 2022',
-      description: 'Built scalable web applications from scratch, collaborated with design team to create intuitive user interfaces, and optimized database performance.',
-      technologies: ['Vue.js', 'Python', 'PostgreSQL', 'Redis', 'GraphQL'],
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      title: 'Junior Developer',
-      company: 'DevAgency',
-      location: 'New York, NY',
-      duration: '2019 - 2020',
-      description: 'Developed responsive websites and mobile applications, participated in code reviews, and contributed to open-source projects.',
-      technologies: ['JavaScript', 'React Native', 'MongoDB', 'Express.js'],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Software Engineering Intern',
-      company: 'BigTech Inc.',
-      location: 'Seattle, WA',
-      duration: '2018 - 2019',
-      description: 'Assisted in developing internal tools, wrote unit tests, and participated in agile development processes.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Git'],
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
-
   return (
     <section id="experience" className="py-20 bg-slate-900/50">
       <div className="container mx-auto px-6">
@@ -144,7 +85,7 @@ const Experience: React.FC = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Experience
+            {experienceData.title}
           </h2>
 
           <div className="max-w-4xl mx-auto">
@@ -152,7 +93,7 @@ const Experience: React.FC = () => {
               {/* Timeline Line */}
               <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 to-cyan-500"></div>
 
-              {experiences.map((experience, index) => (
+              {experienceData.experiences.map((experience, index) => (
                 <div 
                   key={experience.title}
                   className={`relative mb-12 ${

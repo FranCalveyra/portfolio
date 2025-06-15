@@ -1,26 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import { heroData } from '../data';
 
 const Hero: React.FC = () => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const titles = [
-    'Software Engineer',
-    'Software Engineering Student',
-    'Software Developer',
-    'Passionate Learner',
-    'Game Developer',
-    'Problem Solver',
-    'Team Player',
-    'Quick Learner',
-    'Hard Worker',
-    'Good Person'
-  ];
-
   useEffect(() => {
-    const currentTitle = titles[currentIndex];
+    const currentTitle = heroData.titles[currentIndex];
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         if (currentText.length < currentTitle.length) {
@@ -33,13 +21,13 @@ const Hero: React.FC = () => {
           setCurrentText(currentText.slice(0, -1));
         } else {
           setIsDeleting(false);
-          setCurrentIndex((prev) => (prev + 1) % titles.length);
+          setCurrentIndex((prev) => (prev + 1) % heroData.titles.length);
         }
       }
     }, isDeleting ? 50 : 100);
 
     return () => clearTimeout(timeout);
-  }, [currentText, currentIndex, isDeleting, titles]);
+  }, [currentText, currentIndex, isDeleting]);
 
   const scrollToAbout = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
@@ -57,7 +45,7 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-            John Doe
+            {heroData.name}
           </h1>
           <div className="text-2xl md:text-4xl mb-8 h-16 flex items-center justify-center">
             <span className="text-gray-300">I'm </span>
@@ -67,14 +55,13 @@ const Hero: React.FC = () => {
             </span>
           </div>
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Crafting elegant solutions to complex problems through code. 
-            Passionate about creating impactful software that makes a difference.
+            {heroData.description}
           </p>
           
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12">
             <a 
-              href="https://github.com" 
+              href={heroData.socials.github} 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 hover:scale-110"
@@ -82,7 +69,7 @@ const Hero: React.FC = () => {
               <Github size={24} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href={heroData.socials.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 hover:scale-110"
@@ -90,7 +77,7 @@ const Hero: React.FC = () => {
               <Linkedin size={24} />
             </a>
             <a 
-              href="mailto:john@example.com"
+              href={heroData.socials.email}
               className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 hover:scale-110"
             >
               <Mail size={24} />
