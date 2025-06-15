@@ -34,7 +34,7 @@ export const projectsData = {
   projectCategories: [
     {
       title: 'Chess',
-      description: 'Java-based Chess Engine with a JavaFX GUI and variants like Capablanca Chess and Chess960. Developed following SOLID principles at their best.',
+      description: 'A Java-based Chess Engine with a responsive JavaFX GUI. It supports variants like Capablanca Chess and Chess960, and was developed with a strong focus on applying SOLID principles for a clean and maintainable codebase.',
       technologies: ['Java', 'J-Pro', 'JavaFX', 'Kotlin', 'Markdown'],
       image: 'https://digital-game-technology-2021.imgix.net/media/Headers/dgt-electronic-plastic-chess-pieces.jpg?auto=format&crop=focalpoint&domain=digital-game-technology-2021.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=721&ixlib=php-3.3.1&q=82&w=1081',
       github: 'https://github.com/FranCalveyra/chess',
@@ -44,7 +44,7 @@ export const projectsData = {
     },
     {
       title: 'Snippet-Searcher',
-      description: 'Microservices-based system for uploading, editing, executing and running tests on a custom LSP code snippets (with its own compiler)',
+      description: 'A microservices-based system for managing custom LSP code snippets. It allows for uploading, editing, and execution with its own compiler and testing framework. Built with a robust and scalable architecture for handling complex code operations.',
       technologies: ['React', 'PostgreSQL', 'TypeScript', 'Java', 'Kotlin', 'Spring', 'Gradle', 'Azure', 'Redis', 'Nginx'],
       image: 'https://opensource.com/sites/default/files/lead-images/search_find_code_python_programming.png',
       github: 'https://github.com/Al-Fajor',
@@ -54,9 +54,9 @@ export const projectsData = {
     },
     {
       title: 'Portfolio',
-      description: 'This portfolio :)',
+      description: 'A modern, responsive portfolio website built to showcase my projects and skills. It features smooth animations, interactive components, and a clean design. The site is optimized for performance and accessibility, focusing on a great user experience.',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-      image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://static.resumegiants.com/wp-content/uploads/sites/25/2022/06/09105622/Professional-portfolio-736x414.webp',
       github: 'https://github.com/FranCalveyra/portfolio',
       live: 'https://francalveyra.github.io/portfolio',
       icon: "Globe",
@@ -64,7 +64,7 @@ export const projectsData = {
     },
     {
       title: 'Cinemapedia',
-      description: 'Mobile application integrating TheMovieDB API to enable film search, detailed metadata display, favorites management, and trending titles exploration. Built following clean-architecture and Riverpod state management to deliver a responsive, maintainable, and scalable codebase.',
+      description: 'A mobile app using TheMovieDB API for film discovery. It features movie searches, detailed metadata, and favorites management. Built with a clean architecture and Riverpod for state management, resulting in a responsive and scalable codebase.',
       technologies: ['Flutter', 'Dart', 'Android Studio', 'XCode'],
       image: 'https://images.adsttc.com/media/images/5f7d/fef2/63c0/170a/9100/0273/large_jpg/Jiangnan_Photography.jpg?1602092773',
       github: 'https://github.com/FranCalveyra/cinemapedia',
@@ -74,7 +74,7 @@ export const projectsData = {
     },
     {
       title: 'PocketPedia',
-      description: 'Android mobile application that serves as a digital Pokédex and team builder for Pokémon enthusiasts',
+      description: 'An Android Pokédex and team builder app for Pokémon fans. It provides real-time team composition, detailed stats via PokéAPI integration, and follows modern Android development practices, including a strong focus on visual design principles.',
       technologies: ['Kotlin', 'Compose', 'Gradle', 'Firebase'],
       image: 'https://alfabetajuega.com/hero/2019/09/pokemon-pokedex-pikachu.jpg?width=1200&aspect_ratio=16:9',
       github: 'https://github.com/FranCalveyra/pocketpedia',
@@ -84,7 +84,7 @@ export const projectsData = {
     },
     {
       title: 'Conc-Summary',
-      description: 'Notes from Concurrent Programming with the Rust Docs appearence',
+      description: 'A comprehensive collection of concurrent programming notes and examples, styled after the Rust documentation. It covers key concepts across multiple languages, with a focus on practical implementations and best practices for concurrency patterns.',
       technologies: ['Rust', 'Markdown', 'Scala', 'Kotlin'],
       image: 'https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2023/03/rust-foundation-2.jpg',
       github: 'https://github.com/FranCalveyra/conc-summary',
