@@ -1,61 +1,32 @@
 export const experienceData = {
   title: "Experience",
   techIcons: {
-    'React': 'https://skillicons.dev/icons?i=react',
-    'Node.js': 'https://skillicons.dev/icons?i=nodejs',
-    'AWS': 'https://skillicons.dev/icons?i=aws',
-    'Docker': 'https://skillicons.dev/icons?i=docker',
-    'TypeScript': 'https://skillicons.dev/icons?i=typescript',
-    'Vue.js': 'https://skillicons.dev/icons?i=vue',
-    'Python': 'https://skillicons.dev/icons?i=python',
-    'PostgreSQL': 'https://skillicons.dev/icons?i=postgresql',
-    'Redis': 'https://skillicons.dev/icons?i=redis',
-    'GraphQL': 'https://skillicons.dev/icons?i=graphql',
-    'JavaScript': 'https://skillicons.dev/icons?i=javascript',
-    'React Native': 'https://skillicons.dev/icons?i=react',
-    'MongoDB': 'https://skillicons.dev/icons?i=mongodb',
-    'Express.js': 'https://skillicons.dev/icons?i=express',
-    'Java': 'https://skillicons.dev/icons?i=java',
-    'Spring Boot': 'https://skillicons.dev/icons?i=spring',
-    'MySQL': 'https://skillicons.dev/icons?i=mysql',
+    'Flame': 'https://user-images.githubusercontent.com/6718144/101553774-3bc7b000-39ad-11eb-8a6a-de2daa31bd64.png',
+    'Flutter': 'https://skillicons.dev/icons?i=flutter',
+    'Dart': 'https://skillicons.dev/icons?i=dart',
+    'Rive': 'https://framerusercontent.com/images/5WNUOLDFjvpqT7O9s67mXZ8Kv3o.png?scale-down-to=512',
+    'GitHub': 'https://skillicons.dev/icons?i=github',
+    'GitLab': 'https://skillicons.dev/icons?i=gitlab',
     'Git': 'https://skillicons.dev/icons?i=git',
   },
   experiences: [
     {
-      title: 'Senior Software Engineer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      duration: '2022 - Present',
-      description: 'Led development of microservices architecture, mentored junior developers, and implemented CI/CD pipelines reducing deployment time by 60%.',
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'TypeScript'],
+      title: 'Junior Game Developer',
+      company: 'Wumbox',
+      location: 'Remote',
+      duration: 'April 2025 - Present',
+      description: 'Dived into game-dev fundamentals, and partnered remotely with designers, educators, and QA to refine requirements, iterate on features, and ship on schedule',
+      technologies: ['Flame', 'Rive', 'Flutter', 'Dart', 'GitLab'],
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Full Stack Developer',
-      company: 'StartupXYZ',
+      title: 'College Intern',
+      company: 'Globant',
       location: 'Remote',
-      duration: '2020 - 2022',
-      description: 'Built scalable web applications from scratch, collaborated with design team to create intuitive user interfaces, and optimized database performance.',
-      technologies: ['Vue.js', 'Python', 'PostgreSQL', 'Redis', 'GraphQL'],
+      duration: 'December 2024 - April 2025',
+      description: 'Rapidly advanced from novice to production-ready, applying Flutter & Dart best practices to enterprise-grade code, while learning from professionals in an agile senior-led squad—participating in sprint planning, peer code reviews, and continuous delivery—to ensure feature quality and rapid iteration.',
+      technologies: ['Flutter', 'Dart', 'GitHub', 'Git'],
       color: 'from-green-500 to-teal-500'
     },
-    {
-      title: 'Junior Developer',
-      company: 'DevAgency',
-      location: 'New York, NY',
-      duration: '2019 - 2020',
-      description: 'Developed responsive websites and mobile applications, participated in code reviews, and contributed to open-source projects.',
-      technologies: ['JavaScript', 'React Native', 'MongoDB', 'Express.js'],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Software Engineering Intern',
-      company: 'BigTech Inc.',
-      location: 'Seattle, WA',
-      duration: '2018 - 2019',
-      description: 'Assisted in developing internal tools, wrote unit tests, and participated in agile development processes.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'Git'],
-      color: 'from-yellow-500 to-orange-500'
-    }
   ]
 }; 

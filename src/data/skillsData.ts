@@ -4,27 +4,27 @@ export const skillsData = {
     {
       title: 'Frontend',
       skills: [
+        { name: 'Flutter', icon: 'https://skillicons.dev/icons?i=flutter' },
+        { name: 'Dart', icon: 'https://skillicons.dev/icons?i=dart' },
         { name: 'React', icon: 'https://skillicons.dev/icons?i=react' },
         { name: 'TypeScript', icon: 'https://skillicons.dev/icons?i=typescript' },
-        { name: 'Next.js', icon: 'https://skillicons.dev/icons?i=nextjs' },
+        { name: 'Vite', icon: 'https://skillicons.dev/icons?i=vite' },
         { name: 'Tailwind CSS', icon: 'https://skillicons.dev/icons?i=tailwind' },
-        { name: 'Vue.js', icon: 'https://skillicons.dev/icons?i=vue' },
         { name: 'HTML', icon: 'https://skillicons.dev/icons?i=html' },
         { name: 'CSS', icon: 'https://skillicons.dev/icons?i=css' },
-        { name: 'JavaScript', icon: 'https://skillicons.dev/icons?i=javascript' },
       ]
     },
     {
       title: 'Backend',
       skills: [
-        { name: 'Node.js', icon: 'https://skillicons.dev/icons?i=nodejs' },
+        { name: 'Kotlin', icon: 'https://skillicons.dev/icons?i=kotlin' },
+        { name: 'Java', icon: 'https://skillicons.dev/icons?i=java' },
+        { name: 'Spring', icon: 'https://skillicons.dev/icons?i=spring' },
+        { name: 'Go', icon: 'https://skillicons.dev/icons?i=go' },
+        { name: 'Rust', icon: 'https://skillicons.dev/icons?i=rust' },
         { name: 'Python', icon: 'https://skillicons.dev/icons?i=python' },
-        { name: 'PostgreSQL', icon: 'https://skillicons.dev/icons?i=postgresql' },
-        { name: 'MongoDB', icon: 'https://skillicons.dev/icons?i=mongodb' },
         { name: 'Express.js', icon: 'https://skillicons.dev/icons?i=express' },
-        { name: 'Django', icon: 'https://skillicons.dev/icons?i=django' },
-        { name: 'FastAPI', icon: 'https://skillicons.dev/icons?i=fastapi' },
-        { name: 'MySQL', icon: 'https://skillicons.dev/icons?i=mysql' },
+        { name: 'Postman', icon: 'https://skillicons.dev/icons?i=postman' },
       ]
     },
     {
@@ -32,12 +32,13 @@ export const skillsData = {
       skills: [
         { name: 'Git', icon: 'https://skillicons.dev/icons?i=git' },
         { name: 'Docker', icon: 'https://skillicons.dev/icons?i=docker' },
-        { name: 'AWS', icon: 'https://skillicons.dev/icons?i=aws' },
-        { name: 'Unity', icon: 'https://skillicons.dev/icons?i=unity' },
-        { name: 'Figma', icon: 'https://skillicons.dev/icons?i=figma' },
+        { name: 'Azure', icon: 'https://skillicons.dev/icons?i=azure' },
         { name: 'VS Code', icon: 'https://skillicons.dev/icons?i=vscode' },
-        { name: 'Linux', icon: 'https://skillicons.dev/icons?i=linux' },
         { name: 'Firebase', icon: 'https://skillicons.dev/icons?i=firebase' },
+        { name: 'PostgreSQL', icon: 'https://skillicons.dev/icons?i=postgresql' },
+        { name: 'MySQL', icon: 'https://skillicons.dev/icons?i=mysql' },
+        { name: 'GH Actions', icon: 'https://skillicons.dev/icons?i=githubactions' },
+
       ]
     }
   ]

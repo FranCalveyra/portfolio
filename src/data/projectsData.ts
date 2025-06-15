@@ -2,7 +2,7 @@ import { Globe, Smartphone, Gamepad2 } from 'lucide-react';
 
 export const projectsData = {
   title: "Featured Projects",
-  viewMoreLink: "https://github.com",
+  viewMoreLink: "https://github.com/FranCalveyra",
   techIcons: {
     'React': 'https://skillicons.dev/icons?i=react',
     'Node.js': 'https://skillicons.dev/icons?i=nodejs',

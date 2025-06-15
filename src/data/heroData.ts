@@ -1,5 +1,5 @@
 export const heroData = {
-  name: "John Doe",
+  name: "Francisco Calveyra",
   titles: [
     'Software Engineer',
     'Software Engineering Student',
@@ -12,10 +12,10 @@ export const heroData = {
     'Hard Worker',
     'Good Person'
   ],
-  description: "Crafting elegant solutions to complex problems through code. Passionate about creating impactful software that makes a difference.",
+  description: "Building robust, scalable solutions with modern technologies",
   socials: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    email: "mailto:john@example.com"
+    github: "https://github.com/FranCalveyra",
+    linkedin: "https://linkedin.com/in/francisco-calveyra",
+    email: "mailto:franciscocalveyra24@gmail.com"
   }
 }; 

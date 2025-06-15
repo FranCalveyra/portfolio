@@ -1,5 +1,5 @@
 export const headerData = {
-  logo: "<JD />",
+  logo: "<FC />",
   navItems: [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
