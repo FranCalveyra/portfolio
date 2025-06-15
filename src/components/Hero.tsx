@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
             {heroData.name}
           </h1>
           <div className="text-2xl md:text-4xl mb-8 h-16 flex items-center justify-center">
-            <span className="text-gray-300">I'm </span>
+            <span className="text-gray-300">I'm a </span>
             <span className="text-blue-400 ml-2 font-semibold">
               {currentText}
               <span className="animate-pulse">|</span>

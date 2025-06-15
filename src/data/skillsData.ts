@@ -10,8 +10,8 @@ export const skillsData = {
         { name: 'TypeScript', icon: 'https://skillicons.dev/icons?i=typescript' },
         { name: 'Vite', icon: 'https://skillicons.dev/icons?i=vite' },
         { name: 'Tailwind CSS', icon: 'https://skillicons.dev/icons?i=tailwind' },
-        { name: 'HTML', icon: 'https://skillicons.dev/icons?i=html' },
-        { name: 'CSS', icon: 'https://skillicons.dev/icons?i=css' },
+        { name: 'Cypress', icon: 'https://skillicons.dev/icons?i=cypress' },
+        { name: 'Compose', icon: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png' },
       ]
     },
     {

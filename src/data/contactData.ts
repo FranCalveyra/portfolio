@@ -35,7 +35,7 @@ export const contactData = {
       href: "https://linkedin.com/in/francisco-calveyra"
     },
   ],
-  footerText: "&copy; 2024 Francisco Calveyra. Built with React & Tailwind CSS.",
+  footerText: "&copy; 2025 Francisco Calveyra. Built with React & Tailwind CSS.",
   iconComponents: {
     Github,
     Linkedin,
