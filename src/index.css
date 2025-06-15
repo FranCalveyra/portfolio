@@ -50,9 +50,14 @@
   animation-delay: 4s;
 }
 
+body {
+  overscroll-behavior: none;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 /* Custom scrollbar */

@@ -93,6 +93,12 @@ const Hero: React.FC = () => {
               View My Work
             </button>
             <button 
+              onClick={() => document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 bg-gradient-to-r from-blue-800 to-indigo-900 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              About Me
+            </button>
+            <button 
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-4 border-2 border-blue-500 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
