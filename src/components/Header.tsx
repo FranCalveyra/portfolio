@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { headerData } from '../data';
+import DesktopNav from './header/DesktopNav';
+import MobileNav from './header/MobileNav';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,19 +35,7 @@ const Header: React.FC = () => {
             {headerData.logo}
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {headerData.navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="hover:text-blue-400 transition-colors duration-300 relative group"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            ))}
-          </div>
+          <DesktopNav navItems={headerData.navItems} scrollToSection={scrollToSection} />
 
           {/* Mobile Menu Button */}
           <button
@@ -58,17 +48,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-slate-700">
-            {headerData.navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-2 hover:text-blue-400 transition-colors duration-300"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
+          <MobileNav navItems={headerData.navItems} scrollToSection={scrollToSection} />
         )}
       </nav>
     </header>

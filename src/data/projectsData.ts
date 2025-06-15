@@ -33,7 +33,7 @@ export const projectsData = {
   },
   projectCategories: [
     {
-      title: 'Chess',
+      title: 'Chess Engine',
       description: 'A Java-based Chess Engine with a responsive JavaFX GUI. It supports variants like Capablanca Chess and Chess960, and was developed with a strong focus on applying SOLID principles for a clean and maintainable codebase.',
       technologies: ['Java', 'J-Pro', 'JavaFX', 'Kotlin', 'Markdown'],
       image: 'https://digital-game-technology-2021.imgix.net/media/Headers/dgt-electronic-plastic-chess-pieces.jpg?auto=format&crop=focalpoint&domain=digital-game-technology-2021.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=721&ixlib=php-3.3.1&q=82&w=1081',
