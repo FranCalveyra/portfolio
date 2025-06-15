@@ -1,10 +1,15 @@
-import { Code, Coffee, Gamepad2, Heart, Lightbulb, Users } from 'lucide-react';
-
+import { Code, Gamepad2, Heart, Lightbulb, Users } from 'lucide-react';
+import MateIcon from '../components/icons/MateIcon';
+import { calculateYears } from '../utils/yearsCalculator';
+const age = calculateYears(new Date('2003-07-24'));
+const coursingYears = calculateYears(new Date('2022-03-01')) + 1;
 export const aboutData = {
   title: "About Me",
   paragraphs: [
-    "Hello! I'm John, a passionate software engineer with a love for creating innovative solutions and beautiful user experiences. My journey in tech started with curiosity and has evolved into a career dedicated to crafting meaningful software.",
-    "I specialize in full-stack development with expertise in modern web technologies, mobile applications, and game development. I believe in writing clean, maintainable code and following best practices to deliver high-quality solutions.",
+    `Hello! I'm Francisco Calveyra, I'm ${age} years old, and I'm a Software Engineering student at Universidad Austral.`,
+    `I'm currently coursing my ${coursingYears}th year of studies. I'm passionate about programming and video games, and I thrive on creating efficient and scalable systems.`,
+    "While I specialize in backend development, I'm versatile enough to handle frontend work when needed. I've recently dived into mobile development, which I find quite interesting.",
+    "I believe in writing clean, maintainable code and following best practices to deliver high-quality solutions.",
     "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while working on side projects."
   ],
   skills: [
@@ -35,14 +40,14 @@ export const aboutData = {
   ],
   funFacts: [
     {
-      icon: "Coffee",
-      value: "500+",
-      label: "Cups of Coffee",
-      color: "text-amber-400"
+      icon: "Mate",
+      value: "1000+",
+      label: "Mates",
+      color: "text-green-400"
     },
     {
       icon: "Code",
-      value: "50+",
+      value: "30+",
       label: "Projects Completed",
       color: "text-green-400"
     },
@@ -60,6 +65,6 @@ export const iconComponents = {
   Lightbulb,
   Users,
   Heart,
-  Coffee,
+  Mate: MateIcon,
   Gamepad2,
 }; 
