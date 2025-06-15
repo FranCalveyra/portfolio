@@ -1,36 +1,26 @@
-import { TypeAnimation } from "react-type-animation";
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 export const HomeSection = () => {
-    const imagePath = require("../../stories/assets/Desktop.png");
     return (
-        <div
-            id="home"
-            className="relative w-screen h-screen bg-cover bg-center flex flex-col justify-center items-center gap-2.5"
-            style={{ backgroundImage: `url(${imagePath})` }}
-        >
-            <div className="absolute inset-0 bg-[#454961] opacity-65"></div>
-            <h1 className="relative text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
-                Hi, I’m Francisco Calveyra,
+        <section id="home" className="w-full h-screen flex flex-col justify-center items-center bg-surface">
+            <h1 className="text-center text-5xl sm:text-6xl lg:text-7xl font-heading text-primary mb-4">
+                Hi, I'm <span className="font-semibold">Francisco Calveyra</span>
+            </h1>
+            <div className="text-center text-2xl sm:text-3xl md:text-4xl font-mono text-accent">
                 <TypeAnimation
                     sequence={[
-                        "a Software Engineering Student",
-                        "a Software Developer",
-                        "a passionate learner",
-                        "a Game Developer",
-                        "a problem solver",
-                        "a team player",
-                        "a quick learner",
-                        "a hard worker",
-                        "a good person",
+                        'Software Engineering Student',
+                        'Full-Stack Developer',
+                        'Game Developer',
+                        'Problem Solver',
+                        'Open Source Enthusiast'
                     ]}
                     wrapper="span"
-                    speed={300}
-                    deletionSpeed={50}
-                    style={{ display: "inline-block" }}
+                    className="inline-block"
                     repeat={Infinity}
                 />
-            </h1>
-        </div>
+            </div>
+        </section>
     );
 };

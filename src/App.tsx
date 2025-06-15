@@ -4,10 +4,9 @@ import {LandingPage} from "./pages/LandingPage.tsx";
 
 function App() {
   return (
-      <div>
-
-        <LandingPage></LandingPage>
-      </div>
+    <main className="font-body">
+      <LandingPage />
+    </main>
   );
 }
 

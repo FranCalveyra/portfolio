@@ -11,7 +11,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="dark">
+      <div className="min-h-screen bg-bg text-text">
+        <App />
+      </div>
+    </div>
   </React.StrictMode>
 );
 reportWebVitals()

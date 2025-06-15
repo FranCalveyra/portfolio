@@ -1,3 +1,5 @@
+import React from "react";
+
 interface NavbarItemProps {
     text: string;
     href: string;
@@ -17,8 +19,8 @@ export const NavbarItem = ({ text, href }: NavbarItemProps) => {
     };
 
     return (
-        <div className="h-16 text-center text-white text-lg sm:text-xl lg:text-2xl font-normal font-['Martian_Mono'] px-2 sm:px-4 mt-2 sm:mt-6 hover:underline transition-opacity duration-300 ease-in-out hover:opacity-75">
-            <a href={href} onClick={handleClick}>
+        <div className="h-16 flex items-center text-text text-base sm:text-lg font-body px-4 hover:text-primary transition-colors duration-200">
+            <a href={href} onClick={handleClick} className="w-full text-center">
                 {text}
             </a>
         </div>

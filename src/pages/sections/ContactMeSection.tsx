@@ -1,31 +1,23 @@
 import React from "react";
-import { TechIcon } from "../../stories/TechIcon/TechIcon.tsx";
 
-export const ContactMeSection = () =>{
+export const ContactMeSection = () => {
     return (
-        <div id="contact"
-             className="w-screen px-4 sm:px-8 lg:px-16 pt-16 pb-32 bg-[#454860] flex flex-col items-center gap-8 sm:gap-16">
-            <h1 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
-                Contact Me
-            </h1>
-            <p className="text-center text-white text-lg sm:text-xl lg:text-2xl font-normal font-['Martian Mono'] flex flex-wrap justify-center items-center gap-2">
-                I’d love to hear from you! Feel free to reach out to me via email at{' '}
-                <a href="mailto:franciscocalveyra24@gmail.com"
-                   className="inline-flex items-center font-bold underline gap-2">
-                    <TechIcon technology="gmail" size={64}/>
-                </a>or connect with me on{' '}
-                <a href="https://linkedin.com/in/francisco-calveyra"
-                   className="inline-flex items-center font-bold underline gap-2">
-                    <TechIcon technology="linkedin" size={64}/>
-                </a>
-            </p>
-            <p className="text-center text-white text-lg sm:text-xl lg:text-2xl font-normal font-['Martian Mono'] flex flex-wrap justify-center items-center gap-2">
-                You can also check my{' '}
-                <a href="https://www.github.com/FranCalveyra"
-                   className="inline-flex items-center font-bold underline gap-2">
-                    <TechIcon technology="github" size={64}/>
-                </a> to see what I’ve been up to lately!
-            </p>
-        </div>
-    )
-}
+        <section id="contact" className="w-full bg-surface py-16">
+            <div className="max-w-xl mx-auto text-center px-4">
+                <h2 className="text-3xl font-heading text-primary mb-4">Contact Me</h2>
+                <p className="text-text mb-6">I'd love to connect with you!</p>
+                <div className="flex justify-center space-x-6">
+                    <a href="mailto:franciscocalveyra24@gmail.com" className="opacity-75 hover:opacity-100">
+                        <img src="https://skillicons.dev/icons?i=gmail" alt="Email" className="w-8 h-8" />
+                    </a>
+                    <a href="https://linkedin.com/in/francisco-calveyra" className="opacity-75 hover:opacity-100">
+                        <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" className="w-8 h-8" />
+                    </a>
+                    <a href="https://github.com/FranCalveyra" className="opacity-75 hover:opacity-100">
+                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-8 h-8" />
+                    </a>
+                </div>
+            </div>
+        </section>
+    );
+};

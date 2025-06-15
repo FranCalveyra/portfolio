@@ -1,4 +1,4 @@
-import { ProjectContainer } from "../../stories/ProjectContainer/index.tsx";
+import { ProjectContainer } from "../../components/ProjectContainer/index.tsx";
 import "./ProjectSection.css"
 import React from "react";
 
@@ -7,7 +7,7 @@ export const ProjectSection = () => {
         {
             projectTitle: "Chess Engine",
             projectDescription: "Java-based Chess Engine with a JavaFX GUI and variants like Capablanca Chess and Chess960.",
-            projectImage: require("../../stories/assets/chess-board.png"),
+            projectImage: require("../../assets/chess-board.png"),
             projectLink: "https://chess-engine-lk8z.onrender.com",
             usedTechnologies: ["java", "gradle", "kotlin", "maven", "github"]
         },
@@ -28,7 +28,7 @@ export const ProjectSection = () => {
         {
             projectTitle: "Austral Map",
             projectDescription: "Web app showing degree curriculum as a graph of courses and relationships.",
-            projectImage: require("../../stories/assets/austral-map.png"),
+            projectImage: require("../../assets/austral-map.png"),
             projectLink: "https://sasakiimarcos.github.io/austral-map/",
             usedTechnologies: ["react", "ts", "tailwind", "python"]
         },
@@ -49,40 +49,39 @@ export const ProjectSection = () => {
         {
             projectTitle: "RPL Clone",
             projectDescription: "Microservices replicating FIUBA's RPL page with web app and database.",
-            projectImage: require("../../stories/assets/merge64-logo.png"),
+            projectImage: require("../../assets/merge64-logo.png"),
             projectLink: "https://github.com/Merge64/rpl-service",
             usedTechnologies: ["golang", "react", "ts", "postgresql", "docker", "github"]
         },
         {
             projectTitle: "Trippy",
             projectDescription: "Transport app for my Interaction Design course.",
-            projectImage: require("../../stories/assets/trippy-logo.png"),
+            projectImage: require("../../assets/trippy-logo.png"),
             projectLink: "https://francalveyra.github.io/trippy/",
             usedTechnologies: ["react", "ts", "tailwind", "figma"]
         }
     ];
 
-
-
     return (
-        <div id="projects" className="w-screen bg-[#454860] flex flex-col items-center gap-6 p-6 pt-24">
-            <h1 className="text-center text-white text-4xl sm:text-5xl lg:text-6xl font-normal font-['Martian Mono']">
-                Projects
-            </h1>
-            <div className="w-screen min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-4 pr-8">
-                {projects.map((project, index) => (
-                    <div key={index} className="rounded-lg p-4 flex items-center justify-start aspect-w-1 aspect-h-1">
-                        <ProjectContainer
-                            projectTitle={project.projectTitle}
-                            projectDescription={project.projectDescription}
-                            projectImage={project.projectImage}
-                            projectLink={project.projectLink}
-                            usedTechnologies={project.usedTechnologies}
-                        />
-                    </div>
-                ))}
+        <section id="projects" className="w-full bg-bg py-16">
+            <div className="max-w-5xl mx-auto px-4 flex flex-col items-center gap-8">
+                <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-heading text-primary">
+                    Projects
+                </h2>
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project, index) => (
+                        <div key={index} className="rounded-lg p-4 flex items-center justify-start aspect-w-1 aspect-h-1">
+                            <ProjectContainer
+                                projectTitle={project.projectTitle}
+                                projectDescription={project.projectDescription}
+                                projectImage={project.projectImage}
+                                projectLink={project.projectLink}
+                                usedTechnologies={project.usedTechnologies}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-
+        </section>
     );
 };
