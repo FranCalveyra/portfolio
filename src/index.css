@@ -1,78 +1,106 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400&display=swap');
-
-:root {
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --color-bg: #121212;
-  --color-surface: #1E1E1E;
-  --color-text: #E0E0E0;
-  --color-muted: #AAAAAA;
-  --color-primary: #BB86FC;
-  --color-accent: #03DAC6;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: var(--font-heading);
-  color: var(--color-text);
-}
-
-.icon-open .bar1,
-.icon-open .bar2,
-.icon-open .bar3 {
-  animation: fill-bar-full 0.5s forwards;
-}
-
-.icon-closed .bar1,
-.icon-closed .bar2 {
-  animation: fill-bar-half 0.5s forwards;
-}
-
-.icon-closed .bar3 {
-  animation: unfill-bar-min 0.5s forwards;
-}
-
-@keyframes fill-bar-full {
+/* Custom Animations */
+@keyframes fadeInUp {
   from {
-    stroke-dasharray: 0, 100;
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    stroke-dasharray: 100, 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes fill-bar-half {
-  from {
-    stroke-dasharray: 0, 50;
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
   }
-  to {
-    stroke-dasharray: 50, 50;
-  }
-}
-
-@keyframes unfill-bar-min {
-  from {
-    stroke-dasharray: 0, 10;
-  }
-  to {
-    stroke-dasharray: 10, 90;
+  50% {
+    opacity: 0.5;
   }
 }
 
-.bar1, .bar2 {
-  stroke-dasharray: 50, 50;
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
 }
 
-.bar3 {
-  stroke-dasharray: 10, 90;
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Animation Delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #0891b2);
+}
+
+/* Backdrop blur fallback */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Font family override for FiraCode */
+.font-fira-code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text utilities */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
