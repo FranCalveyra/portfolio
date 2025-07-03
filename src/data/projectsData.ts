@@ -1,4 +1,5 @@
 import { Globe, Smartphone, Gamepad2 } from 'lucide-react';
+import australMap from '../assets/austral-map.png';
 
 export const projectsData = {
   title: "Featured Projects",
@@ -30,6 +31,9 @@ export const projectsData = {
     'Scala': 'https://skillicons.dev/icons?i=scala',
     'Android Studio': 'https://skillicons.dev/icons?i=androidstudio',
     'XCode': 'https://upload.wikimedia.org/wikipedia/en/5/56/Xcode_14_icon.png',
+    'Next': 'https://skillicons.dev/icons?i=nextjs',
+    'Vercel': 'https://skillicons.dev/icons?i=vercel',
+    
   },
   projectCategories: [
     {
@@ -83,12 +87,12 @@ export const projectsData = {
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      title: 'Conc-Summary',
-      description: 'A comprehensive collection of concurrent programming notes and examples, styled after the Rust documentation. It covers key concepts across multiple languages, with a focus on practical implementations and best practices for concurrency patterns.',
-      technologies: ['Rust', 'Markdown', 'Scala', 'Kotlin'],
-      image: 'https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2023/03/rust-foundation-2.jpg',
-      github: 'https://github.com/FranCalveyra/conc-summary',
-      live: 'https://francalveyra.github.io/conc-summary',
+      title: 'Austral Map',
+      description: 'Interactive curriculum visualizer for the Universidad Austral Facultad de Ingeniería careers. It allows students to explore the curriculum of their chosen career and see the dependencies between subjects.',
+      technologies: ['React', 'Next', 'Tailwind CSS', 'TypeScript', 'Vercel', 'Node.js'],
+      image: australMap,
+      github: 'https://github.com/FranCalveyra/austral-map-v2',
+      live: 'https://austral-map-v2.vercel.app/',
       icon: "Globe",
       color: 'from-red-500 to-pink-500'
     }
