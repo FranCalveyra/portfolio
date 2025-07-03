@@ -82,7 +82,7 @@ export const projectsData = {
       technologies: ['Kotlin', 'Compose', 'Gradle', 'Firebase'],
       image: 'https://alfabetajuega.com/hero/2019/09/pokemon-pokedex-pikachu.jpg?width=1200&aspect_ratio=16:9',
       github: 'https://github.com/FranCalveyra/pocketpedia',
-      live: 'https://francalveyra.github.io/portfolio', // TODO: deploy PocketPedia once we finish coursing it
+      live: 'https://appetize.io/app/b_dkzvj3oztsfjkxnyigguve44tq',
       icon: "Smartphone",
       color: 'from-indigo-500 to-purple-500'
     },
