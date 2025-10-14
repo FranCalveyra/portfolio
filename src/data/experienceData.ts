@@ -8,8 +8,19 @@ export const experienceData = {
     'GitHub': 'https://skillicons.dev/icons?i=github',
     'GitLab': 'https://skillicons.dev/icons?i=gitlab',
     'Git': 'https://skillicons.dev/icons?i=git',
+    'Python': 'https://skillicons.dev/icons?i=py',
+    'Qt': 'https://skillicons.dev/icons?i=qt',
   },
   experiences: [
+    {
+      title: 'Software Developer',
+      company: 'Data Voices',
+      location: 'Remote',
+      duration: 'October 2025 - Present',
+      description: 'Collaborated within an experienced team to design and develop intelligent AI agents using Python.',
+      technologies: ['Python', 'Qt', 'GitHub'],
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
       title: 'Junior Game Developer',
       company: 'Wumbox',
