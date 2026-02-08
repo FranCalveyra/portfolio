@@ -17,7 +17,7 @@
     "socials": {
       "github": "https://github.com/FranCalveyra",
       "linkedin": "https://linkedin.com/in/francisco-calveyra",
-      "email": "mailto:franciscocalveyra24@gmail.com"
+      "email": "mailto:francalveyra24@gmail.com"
     }
   },
   "header": {
@@ -69,9 +69,24 @@
       }
     ],
     "funFacts": [
-      { "icon": "Mate", "value": "1000+", "label": "Mates", "color": "text-red-400" },
-      { "icon": "Code", "value": "30+", "label": "Projects Completed", "color": "text-green-400" },
-      { "icon": "Gamepad2", "value": "10+", "label": "Games Developed", "color": "text-purple-400" }
+      {
+        "icon": "Mate",
+        "value": "1000+",
+        "label": "Mates",
+        "color": "text-red-400"
+      },
+      {
+        "icon": "Code",
+        "value": "30+",
+        "label": "Projects Completed",
+        "color": "text-green-400"
+      },
+      {
+        "icon": "Gamepad2",
+        "value": "10+",
+        "label": "Games Developed",
+        "color": "text-purple-400"
+      }
     ]
   },
   "skills": {
@@ -80,14 +95,29 @@
       {
         "title": "Frontend",
         "skills": [
-          { "name": "Flutter", "icon": "https://skillicons.dev/icons?i=flutter" },
+          {
+            "name": "Flutter",
+            "icon": "https://skillicons.dev/icons?i=flutter"
+          },
           { "name": "Dart", "icon": "https://skillicons.dev/icons?i=dart" },
           { "name": "React", "icon": "https://skillicons.dev/icons?i=react" },
-          { "name": "TypeScript", "icon": "https://skillicons.dev/icons?i=typescript" },
+          {
+            "name": "TypeScript",
+            "icon": "https://skillicons.dev/icons?i=typescript"
+          },
           { "name": "Vite", "icon": "https://skillicons.dev/icons?i=vite" },
-          { "name": "Tailwind CSS", "icon": "https://skillicons.dev/icons?i=tailwind" },
-          { "name": "Cypress", "icon": "https://skillicons.dev/icons?i=cypress" },
-          { "name": "Compose", "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png" }
+          {
+            "name": "Tailwind CSS",
+            "icon": "https://skillicons.dev/icons?i=tailwind"
+          },
+          {
+            "name": "Cypress",
+            "icon": "https://skillicons.dev/icons?i=cypress"
+          },
+          {
+            "name": "Compose",
+            "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png"
+          }
         ]
       },
       {
@@ -99,8 +129,14 @@
           { "name": "Go", "icon": "https://skillicons.dev/icons?i=go" },
           { "name": "Rust", "icon": "https://skillicons.dev/icons?i=rust" },
           { "name": "Python", "icon": "https://skillicons.dev/icons?i=python" },
-          { "name": "Express.js", "icon": "https://skillicons.dev/icons?i=express" },
-          { "name": "Postman", "icon": "https://skillicons.dev/icons?i=postman" }
+          {
+            "name": "Express.js",
+            "icon": "https://skillicons.dev/icons?i=express"
+          },
+          {
+            "name": "Postman",
+            "icon": "https://skillicons.dev/icons?i=postman"
+          }
         ]
       },
       {
@@ -109,11 +145,23 @@
           { "name": "Git", "icon": "https://skillicons.dev/icons?i=git" },
           { "name": "Docker", "icon": "https://skillicons.dev/icons?i=docker" },
           { "name": "Azure", "icon": "https://skillicons.dev/icons?i=azure" },
-          { "name": "VS Code", "icon": "https://skillicons.dev/icons?i=vscode" },
-          { "name": "Firebase", "icon": "https://skillicons.dev/icons?i=firebase" },
-          { "name": "PostgreSQL", "icon": "https://skillicons.dev/icons?i=postgresql" },
+          {
+            "name": "VS Code",
+            "icon": "https://skillicons.dev/icons?i=vscode"
+          },
+          {
+            "name": "Firebase",
+            "icon": "https://skillicons.dev/icons?i=firebase"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "https://skillicons.dev/icons?i=postgresql"
+          },
           { "name": "MySQL", "icon": "https://skillicons.dev/icons?i=mysql" },
-          { "name": "GH Actions", "icon": "https://skillicons.dev/icons?i=githubactions" }
+          {
+            "name": "GH Actions",
+            "icon": "https://skillicons.dev/icons?i=githubactions"
+          }
         ]
       }
     ]
@@ -129,7 +177,10 @@
       "GitLab": "https://skillicons.dev/icons?i=gitlab",
       "Git": "https://skillicons.dev/icons?i=git",
       "Python": "https://skillicons.dev/icons?i=py",
-      "Qt": "https://skillicons.dev/icons?i=qt"
+      "Qt": "https://skillicons.dev/icons?i=qt",
+      "PyAudio": "https://pypi-camo.freetls.fastly.net/47e0f72a47368834d802b9431c383019146a0dc4/68747470733a2f2f70656f706c652e637361696c2e6d69742e6564752f6875626572742f7079617564696f2f696d616765732f736e616b652d3330302e706e67",
+      "PyObjC": "https://pyobjc.readthedocs.io/en/latest/_static/pyobjc-logo.jpg",
+      "ScreenCaptureKit": "https://nonstrict.eu/images/blog/2023-09-cocoaheadsnl-screencapturekit.jpg"
     },
     "experiences": [
       {
@@ -208,7 +259,18 @@
       {
         "title": "Snippet-Searcher",
         "description": "A microservices-based system for managing custom LSP code snippets. It allows for uploading, editing, and execution with its own compiler and testing framework. Built with a robust and scalable architecture for handling complex code operations.",
-        "technologies": ["React", "PostgreSQL", "TypeScript", "Java", "Kotlin", "Spring", "Gradle", "Azure", "Redis", "Nginx"],
+        "technologies": [
+          "React",
+          "PostgreSQL",
+          "TypeScript",
+          "Java",
+          "Kotlin",
+          "Spring",
+          "Gradle",
+          "Azure",
+          "Redis",
+          "Nginx"
+        ],
         "image": "https://opensource.com/sites/default/files/lead-images/search_find_code_python_programming.png",
         "github": "https://github.com/Al-Fajor",
         "live": "https://francalveyra.github.io/portfolio",
@@ -248,7 +310,14 @@
       {
         "title": "Austral Map",
         "description": "Interactive curriculum visualizer for the Universidad Austral Facultad de Ingeniería careers. It allows students to explore the curriculum of their chosen career and see the dependencies between subjects.",
-        "technologies": ["React", "Next", "Tailwind CSS", "TypeScript", "Vercel", "Node.js"],
+        "technologies": [
+          "React",
+          "Next",
+          "Tailwind CSS",
+          "TypeScript",
+          "Vercel",
+          "Node.js"
+        ],
         "image": "https://austral-map-v2.vercel.app/og-or-map.png",
         "github": "https://github.com/FranCalveyra/austral-map-v2",
         "live": "https://austral-map-v2.vercel.app/",
@@ -284,7 +353,10 @@
     "socialsTitle": "Follow Me",
     "socials": [
       { "icon": "Github", "href": "https://github.com/FranCalveyra" },
-      { "icon": "Linkedin", "href": "https://linkedin.com/in/francisco-calveyra" }
+      {
+        "icon": "Linkedin",
+        "href": "https://linkedin.com/in/francisco-calveyra"
+      }
     ],
     "footerText": "&copy; 2025 Francisco Calveyra"
   }
