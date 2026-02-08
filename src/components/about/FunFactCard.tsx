@@ -1,5 +1,5 @@
 import React from 'react';
-import { iconComponents } from '../../data';
+import { aboutIconMap } from '../../lib/iconMap';
 
 interface FunFact {
     icon: string;
@@ -13,7 +13,7 @@ interface FunFactCardProps {
 }
 
 const FunFactCard: React.FC<FunFactCardProps> = ({ fact }) => {
-  const Icon = iconComponents[fact.icon as keyof typeof iconComponents] as React.ElementType;
+  const Icon = aboutIconMap[fact.icon] ?? aboutIconMap.Code;
   return (
     <div className="text-center">
       <Icon className={`w-12 h-12 ${fact.color} mx-auto mb-4`} />

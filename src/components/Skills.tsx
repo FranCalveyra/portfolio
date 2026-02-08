@@ -1,11 +1,15 @@
 import React from 'react';
 import { useInView } from '../hooks/useInView';
-import { skillsData } from '../data';
+import { usePortfolio } from '../contexts/PortfolioContext';
 import SectionTitle from './shared/SectionTitle';
 import SkillCategoryCard from './skills/SkillCategoryCard';
 
 const Skills: React.FC = () => {
+  const { data } = usePortfolio();
   const { ref, isInView } = useInView({ threshold: 0.2 });
+
+  if (!data) return null;
+  const { skills: skillsData } = data;
 
   return (
     <section id="skills" className="py-20 bg-slate-900/50">

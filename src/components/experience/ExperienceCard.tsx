@@ -1,6 +1,6 @@
 import React from 'react';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
-import { experienceData } from '../../data';
+import { usePortfolio } from '../../contexts/PortfolioContext';
 import TechCarousel from '../shared/TechCarousel';
 
 interface Experience {
@@ -19,7 +19,10 @@ interface ExperienceCardProps {
   index: number;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, isInView, index }) => (
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, isInView, index }) => {
+  const { data } = usePortfolio();
+  const techIcons = data?.experience?.techIcons ?? {};
+  return (
   <div className={`ml-12 md:ml-0 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-700/30 transition-all duration-500 transform hover:scale-105 ${isInView ? `animate-fadeInUp delay-${index * 200}` : 'opacity-0'}`}>
     <div className="flex items-center mb-3">
       <Briefcase className={`w-5 h-5 mr-2 bg-gradient-to-r ${experience.color} bg-clip-text text-transparent`} />
@@ -42,13 +45,14 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, isInView, i
     <div className="flex justify-center">
       <TechCarousel 
         technologies={experience.technologies}
-        techIcons={experienceData.techIcons}
+        techIcons={techIcons}
         itemsPerView={5}
         iconSize="w-6 h-6"
         translateXValue={32}
       />
     </div>
   </div>
-);
+  );
+};
 
 export default ExperienceCard; 

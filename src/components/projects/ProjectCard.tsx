@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-import { projectsData } from '../../data';
+import { usePortfolio } from '../../contexts/PortfolioContext';
+import { projectIconMap } from '../../lib/iconMap';
 import TechCarousel from '../shared/TechCarousel';
 
 interface Project {
@@ -21,7 +22,9 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, isInView, index }) => {
-  const Icon = projectsData.iconComponents[project.icon as keyof typeof projectsData.iconComponents];
+  const { data } = usePortfolio();
+  const techIcons = data?.projects?.techIcons ?? {};
+  const Icon = projectIconMap[project.icon] ?? projectIconMap.Globe;
 
   return (
     <div className={`bg-slate-800/30 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-slate-700/30 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl group ${isInView ? `animate-fadeInUp delay-${index * 100}` : 'opacity-0'}`}>
@@ -46,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isInView, index }) =
         <div className="mb-4">
           <TechCarousel
             technologies={project.technologies}
-            techIcons={projectsData.techIcons}
+            techIcons={techIcons}
             itemsPerView={4}
             iconSize="w-8 h-8"
             translateXValue={40}

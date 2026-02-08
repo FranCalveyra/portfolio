@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from '../hooks/useInView';
-import { contactData } from '../data';
+import { usePortfolio } from '../contexts/PortfolioContext';
 import SectionTitle from './shared/SectionTitle';
 import ContactHeader from './contact/ContactHeader';
 import ContactDetailCard from './contact/ContactDetailCard';
@@ -8,7 +8,11 @@ import ContactSocials from './contact/ContactSocials';
 import Footer from './shared/Footer';
 
 const Contact: React.FC = () => {
+  const { data } = usePortfolio();
   const { ref, isInView } = useInView({ threshold: 0.2 });
+
+  if (!data) return null;
+  const contactData = data.contact;
 
   return (
     <section id="contact" className="py-20">

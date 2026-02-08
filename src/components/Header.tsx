@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { headerData } from '../data';
+import { usePortfolio } from '../contexts/PortfolioContext';
 import DesktopNav from './header/DesktopNav';
 import MobileNav from './header/MobileNav';
 
 const Header: React.FC = () => {
+  const { data } = usePortfolio();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,6 +26,9 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  if (!data) return null;
+  const { header } = data;
+
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -32,10 +36,10 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            {headerData.logo}
+            {header.logo}
           </div>
 
-          <DesktopNav navItems={headerData.navItems} scrollToSection={scrollToSection} />
+          <DesktopNav navItems={header.navItems} scrollToSection={scrollToSection} />
 
           {/* Mobile Menu Button */}
           <button
@@ -48,7 +52,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <MobileNav navItems={headerData.navItems} scrollToSection={scrollToSection} />
+          <MobileNav navItems={header.navItems} scrollToSection={scrollToSection} />
         )}
       </nav>
     </header>

@@ -1,0 +1,27 @@
+name: Sync Google Doc to Firestore
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs once a day at midnight
+  workflow_dispatch: # Allows you to click a button to run it manually
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm ci # Cleaner install for CI environments
+
+      - name: Run Sync Script
+        run: node scripts/sync-db.js
+        env:
+          # We will add these secrets in the next step
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          GOOGLE_DOC_ID: ${{ secrets.GOOGLE_DOC_ID }}

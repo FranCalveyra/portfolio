@@ -1,11 +1,15 @@
 import React from 'react';
 import { useInView } from '../hooks/useInView';
-import { experienceData } from '../data';
+import { usePortfolio } from '../contexts/PortfolioContext';
 import SectionTitle from './shared/SectionTitle';
 import ExperienceCard from './experience/ExperienceCard';
 
 const Experience: React.FC = () => {
+  const { data } = usePortfolio();
   const { ref, isInView } = useInView({ threshold: 0.2 });
+
+  if (!data) return null;
+  const experienceData = data.experience;
 
   return (
     <section id="experience" className="py-20 bg-slate-900/50">

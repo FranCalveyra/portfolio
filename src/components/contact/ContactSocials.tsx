@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactData } from '../../data';
+import { contactIconMap } from '../../lib/iconMap';
 
 interface Social {
     icon: string;
@@ -17,7 +17,7 @@ const ContactSocials: React.FC<ContactSocialsProps> = ({ title, socials }) => {
       <h4 className="text-lg font-medium mb-6 text-white">{title}</h4>
       <div className="flex justify-center space-x-6">
         {socials.map((social, index) => {
-          const Icon = contactData.iconComponents[social.icon as keyof typeof contactData.iconComponents];
+          const Icon = contactIconMap[social.icon] ?? contactIconMap.Github;
           return (
             <a
               key={index}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactData } from '../../data';
+import { contactIconMap } from '../../lib/iconMap';
 
 interface ContactDetail {
   icon: string;
@@ -14,20 +14,21 @@ interface ContactDetailCardProps {
 }
 
 const ContactDetailCard: React.FC<ContactDetailCardProps> = ({ detail }) => {
-  const Icon = contactData.iconComponents[detail.icon as keyof typeof contactData.iconComponents];
+  const isIconUrl = detail.icon.startsWith('http');
+  const Icon = isIconUrl ? null : (contactIconMap[detail.icon] ?? contactIconMap.MapPin);
 
   return (
     <div className="flex flex-col items-center text-center group">
       <div className="w-16 h-16 bg-slate-800/50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-slate-700/50 transition-all duration-300 transform group-hover:scale-110">
-        {detail.href ? (
+        {isIconUrl ? (
           <img 
             src={detail.icon} 
             alt={detail.title}
             className="w-8 h-8"
           />
-        ) : (
-          <Icon className={`w-8 h-8 ${detail.color}`} />
-        )}
+        ) : Icon ? (
+          <Icon className={`w-8 h-8 ${detail.color ?? ''}`} />
+        ) : null}
       </div>
       <h4 className="font-medium text-white mb-2">{detail.title}</h4>
       {detail.href ? (
