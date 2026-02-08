@@ -287,10 +287,109 @@ function descriptionChunkToText(chunk: StyledLine[]): string {
     .trim();
 }
 
+/** True if line looks like company name or location (not a bullet/sentence). */
+function looksLikeLeadingInfo(line: string): boolean {
+  const t = line.trim();
+  if (!t) return false;
+  if (/^●\s*/.test(t)) return false;
+  if (t.length > 80) return false;
+  if (looksLikeDuration(t)) return false;
+  if (/\b(Developed|Engineered|Collaborated|Contributed|Gained|Participated|Spearheaded|Orchestrated|Built|Designed)\b/i.test(t)) return false;
+  if (/,/.test(t)) return true;
+  if (/\b(CABA|Buenos Aires|Remote)\b/i.test(t)) return true;
+  if (t.length <= 30 && /^[A-Za-z0-9\s&.-]+$/.test(t) && !/\b(using|with|for|and|the)\b/i.test(t)) return true;
+  return false;
+}
+
+/** True if line looks like a job title (short, role-like) or duration - should not be in description body. */
+function looksLikeLeadingLine(line: string): boolean {
+  const t = line.trim();
+  if (!t) return true;
+  if (looksLikeDuration(t)) return true;
+  if (/^●\s*/.test(t)) return false;
+  if (t.length <= 40 && /\b(Developer|Engineer|Trainee|Intern|Manager|Designer|Software)\b/i.test(t)) return true;
+  if (looksLikeLeadingInfo(t)) return true;
+  return false;
+}
+
+/**
+ * Strip leading duration/title/location lines from a description chunk.
+ * Also strips a duration prefix from the first line if it's concatenated with the description (e.g. "December 2024 – April 2025 Gained...").
+ * Returns the chunk without those lines, and the first duration found (if any) so we can set exp.duration when the table didn't provide it.
+ */
+function stripLeadingInfoFromDescription(
+  chunk: StyledLine[]
+): { stripped: StyledLine[]; leadingDuration?: string } {
+  let start = 0;
+  let leadingDuration: string | undefined;
+  for (let i = 0; i < chunk.length; i++) {
+    const text = chunk[i].text.trim();
+    if (!looksLikeLeadingLine(chunk[i].text)) break;
+    if (!leadingDuration && looksLikeDuration(text)) leadingDuration = text;
+    start = i + 1;
+  }
+  let stripped: StyledLine[] = start === 0 ? chunk : chunk.slice(start);
+  if (stripped.length > 0) {
+    const firstText = stripped[0].text;
+    const extracted = extractLeadingDuration(firstText);
+    if (extracted) {
+      if (!leadingDuration) leadingDuration = extracted.duration;
+      if (extracted.rest) {
+        stripped = [
+          { ...stripped[0], text: extracted.rest },
+          ...stripped.slice(1),
+        ];
+      } else {
+        stripped = stripped.slice(1);
+      }
+    }
+  }
+  return { stripped, leadingDuration };
+}
+
+/**
+ * Split a description chunk so trailing company/location lines (next job's leading info)
+ * are not included in the description. Returns { descriptionPart, overflowPart }.
+ * If overflow is a single line like "Globant CABA, Buenos Aires", split into two lines (company, location).
+ */
+function splitDescriptionFromLeadingOverflow(
+  chunk: StyledLine[]
+): { descriptionPart: StyledLine[]; overflowPart: StyledLine[] } {
+  const lines = chunk.map((p) => p.text);
+  let cut = lines.length;
+  for (let i = lines.length - 1; i >= 0; i--) {
+    const line = lines[i].trim();
+    if (!line) continue;
+    if (!looksLikeLeadingInfo(lines[i])) break;
+    cut = i;
+  }
+  if (cut >= lines.length) {
+    return { descriptionPart: chunk, overflowPart: [] };
+  }
+  const descriptionPart = chunk.slice(0, cut);
+  let overflowPart = chunk.slice(cut);
+  if (overflowPart.length === 1) {
+    const t = overflowPart[0].text.trim();
+    const commaIdx = t.indexOf(",");
+    if (commaIdx > 0) {
+      const company = t.slice(0, commaIdx).trim();
+      const location = t.slice(commaIdx + 1).trim();
+      if (company && location) {
+        overflowPart = [
+          { style: overflowPart[0].style, text: company },
+          { style: overflowPart[0].style, text: location },
+        ];
+      }
+    }
+  }
+  return { descriptionPart, overflowPart };
+}
+
 /**
  * Parse experience section when it contains tables + following bullets.
  * Structure: table (2 rows = leading info) → bullet block (description) → next table → ...
- * A new table starts a new position.
+ * A new table starts a new position. Trailing company/location in a description chunk
+ * (next job's leading info) is stripped and prepended to the next table.
  */
 function parseExperiencesFromTableAndBullets(
   styledLines: StyledLine[]
@@ -298,9 +397,14 @@ function parseExperiencesFromTableAndBullets(
   const chunks = splitByTableRows(styledLines);
   const experiences: Omit<ExperienceItem, "technologies" | "color">[] = [];
   let i = 0;
+  let pendingLeading: StyledLine[] = [];
 
   while (i < chunks.length) {
-    const chunk = chunks[i];
+    let chunk = chunks[i];
+    if (pendingLeading.length > 0 && isTableRowChunk(chunk)) {
+      chunk = [...pendingLeading, ...chunk];
+      pendingLeading = [];
+    }
     const lines = chunk.map((p) => p.text).filter(Boolean);
 
     if (
@@ -314,7 +418,12 @@ function parseExperiencesFromTableAndBullets(
       );
       if (exp) {
         if (i + 2 < chunks.length && isDescriptionChunk(chunks[i + 2])) {
-          exp.description = descriptionChunkToText(chunks[i + 2]);
+          const { descriptionPart, overflowPart } =
+            splitDescriptionFromLeadingOverflow(chunks[i + 2]);
+          const { stripped, leadingDuration } = stripLeadingInfoFromDescription(descriptionPart);
+          exp.description = descriptionChunkToText(stripped);
+          if (!exp.duration && leadingDuration) exp.duration = normalizeDuration(leadingDuration);
+          if (overflowPart.length > 0) pendingLeading = overflowPart;
           i += 3;
         } else {
           i += 2;
@@ -327,7 +436,12 @@ function parseExperiencesFromTableAndBullets(
       const exp = parseOneExperienceBlock(lines);
       if (exp) {
         if (i + 1 < chunks.length && isDescriptionChunk(chunks[i + 1])) {
-          exp.description = descriptionChunkToText(chunks[i + 1]);
+          const { descriptionPart, overflowPart } =
+            splitDescriptionFromLeadingOverflow(chunks[i + 1]);
+          const { stripped, leadingDuration } = stripLeadingInfoFromDescription(descriptionPart);
+          exp.description = descriptionChunkToText(stripped);
+          if (!exp.duration && leadingDuration) exp.duration = normalizeDuration(leadingDuration);
+          if (overflowPart.length > 0) pendingLeading = overflowPart;
           i += 2;
         } else {
           i += 1;
@@ -389,6 +503,30 @@ function looksLikeDuration(s: string): boolean {
     ) ||
     /^[A-Za-z]+\s+\d{4}\s*[-–—]\s*[A-Za-z]+\s+\d{4}$/i.test(t)
   );
+}
+
+/** Regexes to match a duration at the start of a string (capture duration, rest). */
+const DURATION_PREFIX =
+  /^([A-Za-z]+\s+\d{4}\s*[-–—]\s*(?:[A-Za-z]+\s+\d{4}|ongoing|present|current))\s*(.*)$/i;
+const DURATION_PREFIX_NUM =
+  /^(\d{4}\s*[-–—]\s*(?:[A-Za-z]+\s+\d{4}|ongoing|present|current))\s*(.*)$/i;
+const DURATION_PREFIX_TWO_MONTHS =
+  /^([A-Za-z]+\s+\d{4}\s*[-–—]\s*[A-Za-z]+\s+\d{4})\s*(.*)$/i;
+
+/** If the string starts with a duration, return it and the rest; otherwise return null. */
+function extractLeadingDuration(
+  s: string
+): { duration: string; rest: string } | null {
+  const t = s.trim();
+  for (const re of [
+    DURATION_PREFIX,
+    DURATION_PREFIX_NUM,
+    DURATION_PREFIX_TWO_MONTHS,
+  ]) {
+    const m = t.match(re);
+    if (m) return { duration: m[1].trim(), rest: m[2].trim() };
+  }
+  return null;
 }
 
 /**
