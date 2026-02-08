@@ -110,7 +110,6 @@ const serviceAccount: ServiceAccountKey = (() => {
   }
 })();
 const DOC_ID = process.env.GOOGLE_DOC_ID || "";
-console.log("Doc ID: ", DOC_ID);
 
 if (!serviceAccount.project_id) {
   console.error(

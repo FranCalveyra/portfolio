@@ -21,7 +21,6 @@ const serviceAccount = (() => {
     }
 })();
 const DOC_ID = process.env.GOOGLE_DOC_ID || "";
-console.log("Doc ID: ", DOC_ID);
 if (!serviceAccount.project_id) {
     console.error("❌ Missing service account. Add scripts/serviceAccountKey.json or set FIREBASE_SERVICE_ACCOUNT.");
     process.exit(1);
