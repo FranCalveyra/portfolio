@@ -1,0 +1,31 @@
+<section id="{{ .Params.section_id }}" {{ if .Params.alt_bg }}class="section-alt"{{ end }}>
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-title">
+        <h2 class="gradient-text">{{ .Title }}</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="timeline">
+        {{ range .Params.experiences }}
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <h3>{{ .title }}</h3>
+            <div class="company">{{ .company }}</div>
+            <div class="duration">{{ .duration }} · {{ .location }}</div>
+            <p class="description">{{ .description }}</p>
+            <div class="timeline-techs">
+              {{ range .technologies }}
+                {{ $techName := . }}
+                {{ with index $.Params.techIcons $techName }}
+              <img src="{{ . }}" alt="{{ $techName }}" title="{{ $techName }}" loading="lazy" width="28" height="28">
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

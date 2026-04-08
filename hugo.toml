@@ -1,0 +1,10 @@
+baseURL = 'https://francalveyra.github.io/portfolio/'
+languageCode = 'en'
+title = 'Francisco Calveyra | Software Engineer'
+
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'Building robust, scalable solutions with modern technologies'
+  author = 'Francisco Calveyra'
+  logo = '<FC />'

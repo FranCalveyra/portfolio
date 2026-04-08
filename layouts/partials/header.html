@@ -1,0 +1,22 @@
+{{ $sections := sort (where .Site.RegularPages "Section" "sections") "Weight" }}
+<header class="site-header" id="site-header">
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo gradient-text">{{ .Site.Params.logo }}</a>
+      <ul class="desktop-nav">
+        {{ range $sections }}
+        <li><a href="#{{ .Params.section_id }}">{{ .Params.nav_title }}</a></li>
+        {{ end }}
+      </ul>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg id="menu-close" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </nav>
+    <ul class="mobile-nav" id="mobile-nav">
+      {{ range $sections }}
+      <li><a href="#{{ .Params.section_id }}">{{ .Params.nav_title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</header>

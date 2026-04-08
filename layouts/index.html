@@ -1,0 +1,9 @@
+{{ define "main" }}
+  {{- partial "header.html" . -}}
+  <main>
+    {{ range sort (where .Site.RegularPages "Section" "sections") "Weight" }}
+      {{ partial (printf "sections/%s.html" .File.ContentBaseName) . }}
+    {{ end }}
+  </main>
+  {{- partial "footer.html" . -}}
+{{ end }}

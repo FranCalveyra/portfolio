@@ -1,0 +1,25 @@
+<section id="{{ .Params.section_id }}" {{ if .Params.alt_bg }}class="section-alt"{{ end }}>
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-title">
+        <h2 class="gradient-text">{{ .Title }}</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="skills-grid">
+        {{ range .Params.categories }}
+        <div class="glass-card skill-category">
+          <h3 class="gradient-text">{{ .title }}</h3>
+          <div class="skill-icons">
+            {{ range .skills }}
+            <div class="skill-item">
+              <img src="{{ .icon }}" alt="{{ .name }}" loading="lazy" width="40" height="40">
+              <span>{{ .name }}</span>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
