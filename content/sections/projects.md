@@ -10,33 +10,28 @@ viewMoreLink: "https://github.com/FranCalveyra"
 
 techIcons:
   React: "https://skillicons.dev/icons?i=react"
-  Node.js: "https://skillicons.dev/icons?i=nodejs"
   PostgreSQL: "https://skillicons.dev/icons?i=postgresql"
   Tailwind CSS: "https://skillicons.dev/icons?i=tailwind"
   TypeScript: "https://skillicons.dev/icons?i=typescript"
-  Material-UI: "https://skillicons.dev/icons?i=materialui"
-  Vite: "https://skillicons.dev/icons?i=vite"
   Java: "https://skillicons.dev/icons?i=java"
   Kotlin: "https://skillicons.dev/icons?i=kotlin"
   Spring: "https://skillicons.dev/icons?i=spring"
   Gradle: "https://skillicons.dev/icons?i=gradle"
-  Firebase: "https://skillicons.dev/icons?i=firebase"
   Go: "https://skillicons.dev/icons?i=go"
   Rust: "https://skillicons.dev/icons?i=rust"
-  Compose: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png"
-  Flutter: "https://skillicons.dev/icons?i=flutter"
-  Dart: "https://skillicons.dev/icons?i=dart"
   J-Pro: "https://avatars.githubusercontent.com/u/32846447?v=4"
   JavaFX: "https://www.qftest.com/blog/resources/JavaFX.png"
   Markdown: "https://skillicons.dev/icons?i=md"
   Azure: "https://skillicons.dev/icons?i=azure"
   Nginx: "https://skillicons.dev/icons?i=nginx"
   Redis: "https://skillicons.dev/icons?i=redis"
-  Scala: "https://skillicons.dev/icons?i=scala"
-  Android Studio: "https://skillicons.dev/icons?i=androidstudio"
-  XCode: "https://upload.wikimedia.org/wikipedia/en/5/56/Xcode_14_icon.png"
   Next: "https://skillicons.dev/icons?i=nextjs"
   Vercel: "https://skillicons.dev/icons?i=vercel"
+  Langchain: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAiZAAZAA0"
+  Terraform: "https://skillicons.dev/icons?i=terraform"
+  Hugo: "https://icon.icepanel.io/Technology/svg/Hugo.svg"
+  Python: "https://skillicons.dev/icons?i=python"
+  Ollama: "https://images.seeklogo.com/logo-png/59/2/ollama-logo-png_seeklogo-593420.png"
 
 projects:
   - title: "Chess Engine"
@@ -56,33 +51,31 @@ projects:
     icon: "Globe"
 
   - title: "Portfolio"
-    description: "A modern, responsive portfolio website built to showcase my projects and skills. It features smooth animations, interactive components, and a clean design. The site is optimized for performance and accessibility, focusing on a great user experience."
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"]
+    description: "A minimal, dependency-free portfolio site built with Hugo and pure Markdown. It features a self-typing hero animation, glassmorphism cards, scroll-triggered fade-ins, and a responsive timeline — all powered by vanilla CSS and JS with zero npm dependencies."
+    technologies: ["Hugo", "Markdown", "Go"]
     image: "https://static.resumegiants.com/wp-content/uploads/sites/25/2022/06/09105622/Professional-portfolio-736x414.webp"
     github: "https://github.com/FranCalveyra/portfolio"
     live: "https://francalveyra.github.io/portfolio"
     icon: "Globe"
 
-  - title: "Cinemapedia"
-    description: "A mobile app using TheMovieDB API for film discovery. It features movie searches, detailed metadata, and favorites management. Built with a clean architecture and Riverpod for state management, resulting in a responsive and scalable codebase."
-    technologies: ["Flutter", "Dart", "Android Studio", "XCode"]
-    image: "https://images.adsttc.com/media/images/5f7d/fef2/63c0/170a/9100/0273/large_jpg/Jiangnan_Photography.jpg?1602092773"
-    github: "https://github.com/FranCalveyra/cinemapedia"
-    live: "https://francalveyra.github.io/portfolio"
-    icon: "Smartphone"
+  - title: "Agentic DevTools"
+    description: "A terminal-based AI assistant for Python code quality. Paste code and ask it to lint, format, refactor, or run tests — the agent picks the right tool, executes it, and explains the results. Features RAG-powered refactoring with GitHub repo indexing."
+    technologies: ["Python", "Langchain", "Ollama"]
+    image: "https://opensource.com/sites/default/files/lead-images/terminal_command_linux_desktop_code.jpg"
+    github: "https://github.com/FranCalveyra/agentic-devtools"
+    icon: "Globe"
 
-  - title: "PocketPedia"
-    description: "An Android Pokédex and team builder app for Pokémon fans. It provides real-time team composition, detailed stats via PokéAPI integration, and follows modern Android development practices, including a strong focus on visual design principles."
-    technologies: ["Kotlin", "Compose", "Gradle", "Firebase"]
-    image: "https://alfabetajuega.com/hero/2019/09/pokemon-pokedex-pikachu.jpg?width=1200&aspect_ratio=16:9"
-    github: "https://github.com/FranCalveyra/pocketpedia"
-    live: "https://appetize.io/app/b_dkzvj3oztsfjkxnyigguve44tq"
-    icon: "Smartphone"
+  - title: "Rusty Instagram Bot"
+    description: "A Rust backend integrating with Meta's Instagram Graph API for DM auto-replies, webhook forwarding, and story uploads. Features HMAC-SHA256 signature verification and a Terraform-provisioned Azure cloud environment."
+    technologies: ["Rust", "Terraform", "Azure"]
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png"
+    github: "https://github.com/FranCalveyra/rusty-instagram-bot"
+    icon: "Globe"
 
   - title: "Austral Map"
     description: "Interactive curriculum visualizer for the Universidad Austral Facultad de Ingeniería careers. It allows students to explore the curriculum of their chosen career and see the dependencies between subjects."
-    technologies: ["React", "Next", "Tailwind CSS", "TypeScript", "Vercel", "Node.js"]
-    image: "https://austral-map-v2.vercel.app/og-or-map.png"
+    technologies: ["React", "Next", "Tailwind CSS", "TypeScript", "Vercel"]
+    image: "https://scontent.ffdo5-1.fna.fbcdn.net/v/t1.6435-9/106284541_3072441476136208_1825826628869176645_n.png?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Xqc5qUiiGlIQ7kNvwHfSKkV&_nc_oc=AdqRMv1FATNXvZ7RhJBdfQUcoJegb70wjPn6nqNhBPWQRQLp2iEdIuCypp3LbKVzcJaeujpNYZrpLBGTVr2yvnJB&_nc_zt=23&_nc_ht=scontent.ffdo5-1.fna&_nc_gid=S5Wb6Gpp0YMV1OgdZrtCHQ&_nc_ss=7a3a8&oh=00_Af1C1YAERlfhtCgpLdkHUGOWw-_Yf0T1rvFYOX6R85Cocg&oe=69FD254F"
     github: "https://github.com/FranCalveyra/austral-map-v2"
     live: "https://austral-map-v2.vercel.app/"
     icon: "Globe"

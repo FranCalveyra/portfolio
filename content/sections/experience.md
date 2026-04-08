@@ -17,21 +17,25 @@ techIcons:
   Git: "https://skillicons.dev/icons?i=git"
   Python: "https://skillicons.dev/icons?i=py"
   Qt: "https://skillicons.dev/icons?i=qt"
+  React: "https://skillicons.dev/icons?i=react"
+  TypeScript: "https://skillicons.dev/icons?i=typescript"
+  NestJS: "https://skillicons.dev/icons?i=nestjs"
+
 
 experiences:
-  - title: "Software Developer"
-    company: "Data Voices"
-    location: "Remote"
-    duration: "October 2025 - Present"
-    description: "Collaborated within an experienced team to design and develop intelligent AI agents using Python."
-    technologies: ["Python", "Qt", "GitHub"]
-
-  - title: "Junior Game Developer"
+  - title: "Game Developer"
     company: "Wumbox"
     location: "Remote"
     duration: "April 2025 - Present"
     description: "Dived into game-dev fundamentals, and partnered remotely with designers, educators, and QA to refine requirements, iterate on features, and ship on schedule"
-    technologies: ["Flame", "Rive", "Flutter", "Dart", "GitLab"]
+    technologies: ["Flame", "Rive", "Flutter", "Dart"]
+  
+  - title: "AI Engineer"
+    company: "Data Voices"
+    location: "Remote"
+    duration: "October 2025 - February 2026"
+    description: "Collaborated within an experienced team to design and develop intelligent AI agents using Python."
+    technologies: ["Python", "Qt", "GitHub", "NestJS", "TypeScript", "React"]
 
   - title: "College Intern"
     company: "Globant"
