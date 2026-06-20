@@ -1,0 +1,141 @@
+skills:
+  - name: Kotlin
+    icon: skillicons:kotlin
+    tags: [language, backend]
+  - name: Go
+    icon: skillicons:golang
+    tags: [language, backend]
+  - name: Rust
+    icon: skillicons:rust
+    tags: [language, backend]
+  - name: Dart
+    icon: skillicons:dart
+    tags: [language, frontend]
+  - name: Java
+    icon: skillicons:java
+    tags: [language, backend]
+  - name: C#
+    icon: skillicons:cs
+    tags: [language, backend]
+  - name: TypeScript
+    icon: skillicons:ts
+    tags: [language, frontend]
+  - name: Python
+    icon: skillicons:python
+    tags: [language, backend]
+
+  - name: React
+    icon: skillicons:react
+    tags: [framework, frontend]
+  - name: Next.js
+    icon: skillicons:nextjs
+    tags: [framework, frontend]
+  - name: NestJS
+    icon: skillicons:nestjs
+    tags: [framework, backend]
+  - name: Flutter
+    icon: skillicons:flutter
+    tags: [framework, frontend]
+  - name: Qt
+    icon: skillicons:qt
+    tags: [framework, frontend]
+  - name: Spring
+    icon: skillicons:spring
+    tags: [framework, backend]
+  - name: Unity
+    icon: skillicons:unity
+    tags: [framework]
+  - name: Jetpack Compose
+    icon: "custom:jetpack-compose"
+    tags: [framework, frontend]
+
+  - name: ChatGPT
+    icon: "custom:openai"
+    tags: [ai]
+  - name: Claude
+    icon: "custom:claude"
+    tags: [ai]
+  - name: Gemini
+    icon: "custom:gemini"
+    tags: [ai]
+  - name: Ollama
+    icon: "custom:ollama"
+    tags: [ai]
+  - name: LangChain
+    icon: "custom:langchain"
+    tags: [ai]
+  - name: Model Context Protocol
+    icon: "custom:model-context-protocol"
+    tags: [ai]
+
+  - name: AWS
+    icon: skillicons:aws
+    tags: [cloud]
+  - name: GCP
+    icon: skillicons:gcp
+    tags: [cloud]
+  - name: Azure
+    icon: skillicons:azure
+    tags: [cloud]
+  - name: Terraform
+    icon: skillicons:terraform
+    tags: [cloud]
+  - name: Docker
+    icon: skillicons:docker
+    tags: [cloud, tools]
+  - name: Supabase
+    icon: skillicons:supabase
+    tags: [cloud]
+  - name: Firebase
+    icon: skillicons:firebase
+    tags: [cloud]
+
+  - name: Cypress
+    icon: skillicons:cypress
+    tags: [testing, frontend]
+  - name: Jest
+    icon: skillicons:jest
+    tags: [testing]
+  - name: Postman
+    icon: skillicons:postman
+    tags: [testing, tools, backend]
+  - name: GitHub Actions
+    icon: skillicons:githubactions
+    tags: [testing, tools, cloud]
+  - name: Playwright
+    icon: "custom:playwright"
+    tags: [testing]
+  - name: JUnit
+    icon: "custom:junit"
+    tags: [testing]
+  - name: Locust
+    icon: "custom:locust"
+    tags: [testing]
+  - name: New Relic
+    icon: "custom:new-relic"
+    tags: [testing, tools]
+
+  - name: Git
+    icon: skillicons:git
+    tags: [tools]
+  - name: Cursor
+    icon: "custom:cursor"
+    tags: [tools]
+  - name: Figma
+    icon: skillicons:figma
+    tags: [tools]
+  - name: Slack
+    icon: "custom:slack"
+    tags: [tools]
+  - name: Obsidian
+    icon: "custom:obsidian"
+    tags: [tools]
+  - name: Loom
+    icon: "custom:loom"
+    tags: [tools]
+  - name: Jira
+    icon: "custom:jira"
+    tags: [tools]
+  - name: Excalidraw
+    icon: "custom:excalidraw"
+    tags: [tools]

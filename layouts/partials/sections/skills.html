@@ -1,3 +1,37 @@
+{{ $allSkills := hugo.Data.skills.skills }}
+
+{{/* Same 5 sections as the README's Technology Arsenal — single source of truth is data/skills.yml. */}}
+{{ $titles := dict
+  "language" "Core Languages"
+  "framework" "Frameworks & Libraries"
+  "ai" "AI & LLM Engineering"
+  "cloud" "Cloud & Infrastructure"
+  "testing" "Testing & DevOps"
+  "tools" "Tools & Editors"
+}}
+{{ $renderOrder := slice "language" "framework" "ai" "cloud" "testing" "tools" }}
+
+{{/* A skill can carry multiple tags (e.g. GitHub Actions is both "testing" and
+     "cloud"); this priority order decides which single section it lands in,
+     mirroring scripts/sync_skills.py in the README repo. "tools" is the
+     catch-all, so it only claims skills with no other mapped tag. */}}
+{{ $assignPriority := slice "language" "framework" "ai" "testing" "cloud" "tools" }}
+
+{{ $assignedNames := slice }}
+{{ $bySection := dict }}
+{{ range $assignPriority }}
+  {{ $tag := . }}
+  {{ $matched := slice }}
+  {{ range $allSkills }}
+    {{ $skill := . }}
+    {{ if and (in $skill.tags $tag) (not (in $assignedNames $skill.name)) }}
+      {{ $matched = $matched | append $skill }}
+      {{ $assignedNames = $assignedNames | append $skill.name }}
+    {{ end }}
+  {{ end }}
+  {{ $bySection = merge $bySection (dict $tag $matched) }}
+{{ end }}
+
 <section id="{{ .Params.section_id }}" {{ if .Params.alt_bg }}class="section-alt"{{ end }}>
   <div class="container">
     <div class="fade-in">
@@ -6,18 +40,30 @@
         <div class="underline"></div>
       </div>
       <div class="skills-grid">
-        {{ range .Params.categories }}
+        {{ range $renderOrder }}
+        {{ $tag := . }}
+        {{ $title := index $titles $tag }}
+        {{ $matched := index $bySection $tag }}
+        {{ if $matched }}
         <div class="glass-card skill-category">
-          <h3 class="gradient-text">{{ .title }}</h3>
+          <h3 class="gradient-text">{{ $title }}</h3>
           <div class="skill-icons">
-            {{ range .skills }}
+            {{ range $matched }}
             <div class="skill-item">
-              <img src="{{ .icon }}" alt="{{ .name }}" loading="lazy" width="40" height="40">
+              {{ $icon := .icon }}
+              {{ if hasPrefix $icon "skillicons:" }}
+              {{ $id := replace $icon "skillicons:" "" }}
+              <img src="https://skillicons.dev/icons?i={{ $id }}" alt="{{ .name }}" loading="lazy" width="40" height="40">
+              {{ else if hasPrefix $icon "custom:" }}
+              {{ $slug := replace $icon "custom:" "" }}
+              <img src="https://raw.githubusercontent.com/FranCalveyra/FranCalveyra/main/icons/{{ $slug }}.svg" alt="{{ .name }}" loading="lazy" width="40" height="40">
+              {{ end }}
               <span>{{ .name }}</span>
             </div>
             {{ end }}
           </div>
         </div>
+        {{ end }}
         {{ end }}
       </div>
     </div>
