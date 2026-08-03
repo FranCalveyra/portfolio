@@ -8,7 +8,10 @@
       <div class="projects-grid">
         {{ range .Params.projects }}
         <div class="project-card">
-          <div class="project-image" style="background-image: url('{{ .image }}')"></div>
+          {{/* Photos fill the card (cover); logo artwork opts into `image_fit: contain`
+               so a square icon isn't cropped top and bottom by the 12rem card.
+               Local images are written with the /portfolio/ prefix, matching baseURL. */}}
+          <div class="project-image{{ if eq .image_fit "contain" }} project-image-contain{{ end }}" style="background-image: url('{{ .image }}')"></div>
           <div class="project-body">
             <h3>{{ .title }}</h3>
             <p>{{ .description }}</p>

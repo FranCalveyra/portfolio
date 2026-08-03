@@ -20,27 +20,37 @@ techIcons:
   React: "https://skillicons.dev/icons?i=react"
   TypeScript: "https://skillicons.dev/icons?i=typescript"
   NestJS: "https://skillicons.dev/icons?i=nestjs"
+  Firebase: "https://skillicons.dev/icons?i=firebase"
+  MongoDB: "https://skillicons.dev/icons?i=mongodb"
+  OpenAI: "https://raw.githubusercontent.com/FranCalveyra/FranCalveyra/main/icons/openai.svg"
 
 
 experiences:
   - title: "Game Developer"
     company: "Wumbox"
-    location: "Remote"
+    location: "Remote · Freelance → Part-time"
     duration: "April 2025 - Present"
-    description: "Dived into game-dev fundamentals, and partnered remotely with designers, educators, and QA to refine requirements, iterate on features, and ship on schedule"
-    technologies: ["Flame", "Rive", "Flutter", "Dart"]
-  
-  - title: "AI Engineer"
-    company: "Data Voices"
-    location: "Remote"
-    duration: "October 2025 - February 2026"
-    description: "Collaborated within an experienced team to design and develop intelligent AI agents using Python."
-    technologies: ["Python", "Qt", "GitHub", "NestJS", "TypeScript", "React"]
+    description: "Develop cross-platform educational games with Flutter and the Flame engine, integrating interactive Rive animations and Firestore-backed state management to track user progress. Partner with multidisciplinary design and education teams to turn visual concepts into working gameplay features."
+    technologies: ["Flame", "Rive", "Flutter", "Dart", "Firebase"]
 
-  - title: "College Intern"
-    company: "Globant"
+  - title: "Full-Stack Developer"
+    company: "Grubi"
     location: "Remote"
+    duration: "March 2025 - July 2026"
+    description: "Built the backend (Firebase Cloud Functions, Firestore, Auth) and the base Flutter client for an on-demand roadside-assistance app, plus a management dashboard for admins and fleet owners shaped by interviews with real operators. Re-engaged as a paid freelancer to build Cloud Functions for a WhatsApp bot and a web assistance-tracking page that replaced the original Flutter driver flow."
+    technologies: ["Flutter", "Dart", "Firebase", "TypeScript", "Git"]
+
+  - title: "AI Software Engineer"
+    company: "Data Voices"
+    location: "Remote · Part-time"
+    duration: "October 2025 - February 2026"
+    description: "Engineered a real-time AI interview suite for HR teams, wiring OpenAI's Realtime API into live voice interview agents alongside Python agents for meeting synthesis and candidate evaluation. Built high-precision RAG pipelines on MongoDB vector search for semantic resume matching, and led the macOS migration with ScreenCaptureKit, PyObjC and PyAudio."
+    technologies: ["Python", "OpenAI", "MongoDB", "Qt", "NestJS", "TypeScript", "React", "GitHub"]
+
+  - title: "Flutter Trainee"
+    company: "Globant"
+    location: "CABA, Buenos Aires"
     duration: "December 2024 - April 2025"
-    description: "Rapidly advanced from novice to production-ready, applying Flutter & Dart best practices to enterprise-grade code, while learning from professionals in an agile senior-led squad—participating in sprint planning, peer code reviews, and continuous delivery—to ensure feature quality and rapid iteration."
+    description: "Built and shipped production UI components and features for Disney Parks in Flutter and Dart under senior engineer mentorship. Worked inside an Agile squad, taking part in sprint planning and peer code reviews that lifted code quality and cut review turnaround."
     technologies: ["Flutter", "Dart", "GitHub", "Git"]
 ---

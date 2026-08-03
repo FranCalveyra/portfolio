@@ -1,21 +1,23 @@
 {{ $allSkills := hugo.Data.skills.skills }}
 
-{{/* Same 5 sections as the README's Technology Arsenal — single source of truth is data/skills.yml. */}}
+{{/* Same sections as the README's Technology Arsenal — single source of truth is data/skills.yml. */}}
 {{ $titles := dict
   "language" "Core Languages"
   "framework" "Frameworks & Libraries"
   "ai" "AI & LLM Engineering"
+  "database" "Databases"
   "cloud" "Cloud & Infrastructure"
   "testing" "Testing & DevOps"
   "tools" "Tools & Editors"
 }}
-{{ $renderOrder := slice "language" "framework" "ai" "cloud" "testing" "tools" }}
+{{ $renderOrder := slice "language" "framework" "ai" "database" "cloud" "testing" "tools" }}
 
 {{/* A skill can carry multiple tags (e.g. GitHub Actions is both "testing" and
      "cloud"); this priority order decides which single section it lands in,
-     mirroring scripts/sync_skills.py in the README repo. "tools" is the
-     catch-all, so it only claims skills with no other mapped tag. */}}
-{{ $assignPriority := slice "language" "framework" "ai" "testing" "cloud" "tools" }}
+     mirroring scripts/sync_skills.py in the README repo. "database" outranks
+     "cloud" so a managed store lands under Databases rather than Cloud. "tools"
+     is the catch-all, so it only claims skills with no other mapped tag. */}}
+{{ $assignPriority := slice "language" "framework" "ai" "testing" "database" "cloud" "tools" }}
 
 {{ $assignedNames := slice }}
 {{ $bySection := dict }}

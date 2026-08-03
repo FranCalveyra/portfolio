@@ -90,6 +90,19 @@ skills:
     icon: skillicons:firebase
     tags: [cloud]
 
+  - name: PostgreSQL
+    icon: skillicons:postgres
+    tags: [database]
+  - name: MongoDB
+    icon: skillicons:mongodb
+    tags: [database]
+  - name: Redis
+    icon: skillicons:redis
+    tags: [database]
+  - name: SQLite
+    icon: skillicons:sqlite
+    tags: [database]
+
   - name: Cypress
     icon: skillicons:cypress
     tags: [testing, frontend]

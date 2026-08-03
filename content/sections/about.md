@@ -36,12 +36,12 @@ funFacts:
     label: "Games Developed"
 ---
 
-Hello! I'm Francisco Calveyra, I'm 22 years old, and I'm a Software Engineering student at Universidad Austral.
+Hello! I'm Francisco Calveyra, a Computer Engineering student at Universidad Austral and a Software Engineer with production experience across AI-powered systems, cross-platform mobile apps, and backend services.
 
-I'm currently coursing my 5th year of studies. I'm passionate about programming and video games, and I thrive on creating efficient and scalable systems.
+I hold an academic scholarship with an 8.12/10 average, and I've been a Teaching Assistant in Programming I, Software Engineering, and System Design — teaching is how I keep my own fundamentals honest.
 
-While I specialize in backend development, I'm versatile enough to handle frontend work when needed. I've recently dived into mobile development, which I find quite interesting.
+Day to day I work in Python, Kotlin, TypeScript, Go and Flutter/Dart, building RAG pipelines and agentic systems with LangChain and LangGraph, microservices grounded in SOLID and solid system design, and CI-integrated tooling on Terraform-provisioned cloud. I've shipped vector search over MongoDB, identity and auth flows with Clerk and Auth0, and observability with New Relic.
 
-I believe in writing clean, maintainable code and following best practices to deliver high-quality solutions.
+While I lean backend, I'm versatile enough to own the frontend and the mobile client when a product needs it — and I care more about clean, maintainable code than about which layer it lives in. I speak native Spanish and advanced (C1) English, and I work comfortably in remote, cross-functional teams.
 
-When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while working on side projects.
+When I'm not coding, you'll find me cooking, watching football, playing videogames, working through a podcast backlog — or writing code purely for the fun of it.

@@ -32,11 +32,34 @@ techIcons:
   Hugo: "https://icon.icepanel.io/Technology/svg/Hugo.svg"
   Python: "https://skillicons.dev/icons?i=python"
   Ollama: "https://images.seeklogo.com/logo-png/59/2/ollama-logo-png_seeklogo-593420.png"
+  SQLite: "https://skillicons.dev/icons?i=sqlite"
+  Docker: "https://skillicons.dev/icons?i=docker"
+  GitHub Actions: "https://skillicons.dev/icons?i=githubactions"
+  GoReleaser: "https://avatars.githubusercontent.com/u/24697112?v=4"
+  LangGraph: "https://raw.githubusercontent.com/FranCalveyra/FranCalveyra/main/icons/langchain.svg"
+  New Relic: "https://raw.githubusercontent.com/FranCalveyra/FranCalveyra/main/icons/new-relic.svg"
+  Auth0: "https://cdn.simpleicons.org/auth0"
 
 projects:
+  - title: "Claude Desktop Swap"
+    description: "An open-source Go CLI that switches between multiple Claude Desktop accounts without logging out, treating the app's local SQLite cookie database as the authoritative session state. Features atomic profile snapshot/restore with WAL checkpointing, rollback on failed writes, and strict file permissions, shipped as versioned cross-platform binaries via GoReleaser."
+    technologies: ["Go", "SQLite", "GitHub Actions", "GoReleaser"]
+    image: "https://raw.githubusercontent.com/FranCalveyra/claude-desktop-swap/main/assets/claude-desktop-swap-512.png"
+    image_fit: "contain"
+    github: "https://github.com/FranCalveyra/claude-desktop-swap"
+    icon: "Globe"
+
+  - title: "Polyglot"
+    description: "An open-source AI skill library that lets agents translate files between formats by discovering or building the required converter at runtime, instead of relying on hardcoded conversions. Built on a LangGraph agentic backend orchestrating skill discovery, conversion and format validation, with Azure infrastructure fully provisioned through Terraform and a test harness spanning unit, integration and security scanning."
+    technologies: ["LangGraph", "Python", "Terraform", "Azure"]
+    image: "/portfolio/assets/polyglot-logo.png"
+    image_fit: "contain"
+    github: "https://github.com/Polyglot-Austral"
+    icon: "Globe"
+
   - title: "Chess Engine"
     description: "A Java-based Chess Engine with a responsive JavaFX GUI. It supports variants like Capablanca Chess and Chess960, and was developed with a strong focus on applying SOLID principles for a clean and maintainable codebase."
-    technologies: ["Java", "J-Pro", "JavaFX", "Kotlin", "Markdown"]
+    technologies: ["Java", "J-Pro", "JavaFX", "Kotlin", "Gradle", "Docker", "Markdown"]
     image: "https://digital-game-technology-2021.imgix.net/media/Headers/dgt-electronic-plastic-chess-pieces.jpg?auto=format&crop=focalpoint&domain=digital-game-technology-2021.imgix.net&fit=crop&fp-x=0.5&fp-y=0.5&h=721&ixlib=php-3.3.1&q=82&w=1081"
     github: "https://github.com/FranCalveyra/chess"
     live: "https://chess-engine-lk8z.onrender.com/"
@@ -44,7 +67,7 @@ projects:
 
   - title: "Snippet-Searcher"
     description: "A microservices-based system for managing custom LSP code snippets. It allows for uploading, editing, and execution with its own compiler and testing framework. Built with a robust and scalable architecture for handling complex code operations."
-    technologies: ["React", "PostgreSQL", "TypeScript", "Java", "Kotlin", "Spring", "Gradle", "Azure", "Redis", "Nginx"]
+    technologies: ["React", "PostgreSQL", "TypeScript", "Java", "Kotlin", "Spring", "Gradle", "Azure", "Redis", "Nginx", "Docker", "New Relic", "Auth0"]
     image: "https://opensource.com/sites/default/files/lead-images/search_find_code_python_programming.png"
     github: "https://github.com/Al-Fajor"
     live: "https://francalveyra.github.io/portfolio"
