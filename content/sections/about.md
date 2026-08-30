@@ -36,12 +36,8 @@ funFacts:
     label: "Games Developed"
 ---
 
-Hello! I'm Francisco Calveyra, a Computer Engineering student at Universidad Austral and a Software Engineer with production experience across AI-powered systems, cross-platform mobile apps, and backend services.
+Hello! I'm Francisco Calveyra, a Software Engineer and Computer Engineering student at Universidad Austral.
 
-I hold an academic scholarship with an 8.12/10 average, and I've been a Teaching Assistant in Programming I, Software Engineering, and System Design — teaching is how I keep my own fundamentals honest.
+I work primarily across backend engineering, AI-powered systems, and product development, with experience building production software, RAG pipelines, cloud services, and cross-platform applications. I tend to gravitate toward backend and AI work, but I'm comfortable working across the stack and owning features end to end.
 
-Day to day I work in Python, Kotlin, TypeScript, Go and Flutter/Dart, building RAG pipelines and agentic systems with LangChain and LangGraph, microservices grounded in SOLID and solid system design, and CI-integrated tooling on Terraform-provisioned cloud. I've shipped vector search over MongoDB, identity and auth flows with Clerk and Auth0, and observability with New Relic.
-
-While I lean backend, I'm versatile enough to own the frontend and the mobile client when a product needs it — and I care more about clean, maintainable code than about which layer it lives in. I speak native Spanish and advanced (C1) English, and I work comfortably in remote, cross-functional teams.
-
-When I'm not coding, you'll find me cooking, watching football, playing videogames, working through a podcast backlog — or writing code purely for the fun of it.
+Alongside my professional work, I'm a Teaching Assistant in Programming, Software Engineering, and System Design. Teaching has become an important part of how I strengthen my own fundamentals and approach software with a stronger focus on clarity, maintainability, and good design.

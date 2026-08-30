@@ -52,7 +52,7 @@ projects:
   - title: "Polyglot"
     description: "An open-source AI skill library that lets agents translate files between formats by discovering or building the required converter at runtime, instead of relying on hardcoded conversions. Built on a LangGraph agentic backend orchestrating skill discovery, conversion and format validation, with Azure infrastructure fully provisioned through Terraform and a test harness spanning unit, integration and security scanning."
     technologies: ["LangGraph", "Python", "Terraform", "Azure"]
-    image: "/portfolio/assets/polyglot-logo.png"
+    image: "/portfolio/assets/polyglot-logo.jpeg"
     image_fit: "contain"
     github: "https://github.com/Polyglot-Austral"
     icon: "Globe"
