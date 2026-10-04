@@ -26,11 +26,11 @@ techIcons:
 
 
 experiences:
-  - title: "Game Developer"
+  - title: "Software Engineer (Flutter)"
     company: "Wumbox"
     location: "Remote · Freelance → Part-time"
     duration: "April 2025 - Present"
-    description: "Develop cross-platform educational games with Flutter and the Flame engine, integrating interactive Rive animations and Firestore-backed state management to track user progress. Partner with multidisciplinary design and education teams to turn visual concepts into working gameplay features."
+    description: "Develop 12+ cross-platform educational games for Leo Leo, an early-literacy product, with Flutter, Flame and interactive Rive animations alongside multidisciplinary design teams, and build core features of its container app: notifications inbox and push delivery, in-app purchase restore and per-trial gameplay telemetry. Own production-launch monitoring, validating the teacher, family and student follow-up notification system and shipping fixes across the analytics dashboard and Firebase Functions, while coordinating with field teams rolling the product out in schools, reviewing code and mentoring a developer."
     technologies: ["Flame", "Rive", "Flutter", "Dart", "Firebase"]
 
   - title: "Full-Stack Developer"
